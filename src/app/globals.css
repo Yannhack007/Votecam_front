@@ -2,20 +2,247 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*, ::before, ::after {
+    box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue', sans-serif;
+  src: url('/fonts/HelveticaNeueBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue', sans-serif;
+  src: url('/fonts/HelveticaNeueMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+} 
+@font-face {
+  font-family: 'Helvetica Neue', sans-serif;
+  src: url('/fonts/HelveticaNeueThin.otf') format('opentype'); 
+  font-weight: 400;
+  font-style: normal;
+} 
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+
+    --primary-green-500 : #00B88C;
+    --primary-green-600 : #00A77F;
+    --primary-green-700 : #008363;
+    --secondary-green-500 : #023D26;
+    --white-500 : #F0F0F0;
+    --black-500 : #121212;
+    --black-400 : #414141;
+    --black-300 : #606060;
+    --grey-500 : #6c757d;
+    --grey-400 : #899197 ;
+    --grey-300 : #9DA3A8;
+    --grey-100 : #D1D4D7;
+
+    --letter-spacing-minus-one: 0.01em;
+    --letter-spacing-minus-two: 0.02em;
+    --letter-spacing-minus-three: 0.03em;
+
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+.main-layout {
+  padding: 20px 64px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  /* logoText  */
+  .logoText {
+    @apply font-poppins text-h6 -tracking--2% font-semibold leading-28;
+  }
+
+  /* H1 */
+  .h1-custom-bold {
+    @apply text-h1 font-helveticaNueue leading-48 font-bold
+  }
+  .h1-custom-medium {
+    @apply text-h1 font-helveticaNueue leading-48 font-medium
+  }
+  .h1-custom-normal {
+    @apply text-h1 font-helveticaNueue leading-48 font-normal
+  }
+
+  /* H2 */
+  .h2-custom-bold {
+    @apply text-h2 font-helveticaNueue leading-44 font-bold
+  }
+  .h2-custom-medium {
+    @apply text-h2 font-helveticaNueue leading-44 font-medium
+  }
+  .h2-custom-normal {
+    @apply text-h2 font-helveticaNueue leading-44 font-normal
+  }
+
+  /* H3 */
+  .h3-custom-bold {
+    @apply text-h3 font-helveticaNueue leading-40 font-bold
+  }
+  .h3-custom-medium {
+    @apply text-h3 font-helveticaNueue leading-40 font-medium
+  }
+  .h3-custom-normal {
+    @apply text-h3 font-helveticaNueue leading-40 font-normal
+  }
+
+    /* H4 */
+  .h4-custom-bold {
+    @apply text-h4 font-helveticaNueue leading-36 font-bold
+  }
+  .h4-custom-medium {
+    @apply text-h4 font-helveticaNueue leading-36 font-medium
+  }
+  .h4-custom-normal {
+    @apply text-h4 font-helveticaNueue leading-36 font-normal
+  }
+
+      /* H5 */
+  .h5-custom-bold {
+    @apply text-h5 font-helveticaNueue leading-32 font-bold
+  }
+  .h5-custom-medium {
+    @apply text-h5 font-helveticaNueue leading-32 font-medium
+  }
+  .h5-custom-normal {
+    @apply text-h5 font-helveticaNueue leading-32 font-normal
+  }
+    /* H6 */
+  .h6-custom-bold {
+    @apply text-h6 font-helveticaNueue leading-28 font-bold
+  }
+  .h6-custom-medium {
+    @apply text-h6 font-helveticaNueue leading-28 font-medium
+  }
+  .h6-custom-normal {
+    @apply text-h6 font-helveticaNueue leading-28 font-normal
+  }
+
+  /* Paragraph large */
+  .paragraph-large-bold {
+    @apply text-paragraph-large -tracking--1% font-inter leading-28 font-bold
+  }
+  .paragraph-large-medium {
+    @apply text-paragraph-large -tracking--1% font-inter leading-28 font-medium
+  }
+  .paragraph-large-semibold {
+    @apply text-paragraph-large -tracking--1% font-inter leading-28 font-semibold
+  }
+  .paragraph-medium-regular {
+    @apply text-paragraph-medium -tracking--1% font-inter leading-28 font-normal
+  }
+
+  /* Paragraph medium */
+  .paragraph-medium-bold {
+    @apply text-paragraph-medium -tracking--1% font-inter leading-24 font-bold
+  }
+  .paragraph-medium-medium {
+    @apply text-paragraph-medium -tracking--1% font-inter leading-24 font-medium
+  }
+  .paragraph-medium-semibold {
+    @apply text-paragraph-medium -tracking--1% font-inter leading-24 font-semibold
+  }
+  .paragraph-medium-regular {
+    @apply text-paragraph-medium -tracking--1% font-inter leading-24 font-normal
+  }
+
+  /* Paragraph small */
+  .paragraph-small-bold {
+    @apply text-paragraph-small -tracking--1% font-inter leading-20 font-bold
+  }
+  .paragraph-small-medium {
+    @apply text-paragraph-small -tracking--1% font-inter leading-20 font-medium
+  }
+  .paragraph-small-semibold {
+    @apply text-paragraph-small -tracking--1% font-inter leading-20 font-semibold
+  }
+  .paragraph-small-regular {
+    @apply text-paragraph-small -tracking--1% font-inter leading-20 font-normal
+  }
+
+  /* Paragraph xsmall */
+  .paragraph-Xsmall-bold {
+    @apply text-paragraph-Xsmall -tracking--1% font-inter leading-20 font-bold
+  }
+  .paragraph-small-medium {
+    @apply text-paragraph-Xsmall -tracking--1% font-inter leading-20 font-medium
+  }
+  .paragraph-small-semibold {
+    @apply text-paragraph-Xsmall -tracking--1% font-inter leading-20 font-semibold
+  }
+  .paragraph-small-regular {
+    @apply text-paragraph-Xsmall -tracking--1% font-inter leading-20 font-normal
+  }
+
+
+  /* body {
+    @apply bg-background text-foreground;
+  } */
 }
