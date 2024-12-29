@@ -17,6 +17,7 @@ export default {
         },
         secondaryGreen: {
           500: 'var(--secondary-green-500)',
+          400: 'var(--secondary-green-400)',
         },
         customWhite: {
           500: 'var(--white-500)',
@@ -32,6 +33,7 @@ export default {
           400: 'var(--black-400)',
           300: 'var(--black-300)',
         },
+        redTheme: 'hsl(var(--redTheme))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -81,7 +83,7 @@ export default {
       },
       letterSpacing: {
         '-1%': 'var(--letter-spacing-minus-one)',
-		'-2%': 'var(--letter-spacing-minus-two)',
+        '-2%': 'var(--letter-spacing-minus-two)',
       },
       lineHeight: {
         '24': '1.5rem', // 24px
@@ -98,7 +100,7 @@ export default {
         'paragraph-medium': '1rem', //16px
         'paragraph-small': '0.875rem', // 14px
         'paragraph-Xsmall': '0.75rem', //12px
-        'h6': '1.25rem', //20px
+        h6: '1.25rem', //20px
         h5: '1.5rem', //24px
         h4: '1.75rem', //28px
         h3: '2rem', //32px

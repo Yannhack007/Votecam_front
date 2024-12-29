@@ -64,6 +64,7 @@ body {
     --primary-green-600 : #00A77F;
     --primary-green-700 : #008363;
     --secondary-green-500 : #023D26;
+    --secondary-green-400: #007A5E;
     --white-500 : #F0F0F0;
     --black-500 : #121212;
     --black-400 : #414141;
@@ -72,6 +73,7 @@ body {
     --grey-400 : #899197 ;
     --grey-300 : #9DA3A8;
     --grey-100 : #D1D4D7;
+    --redTheme: 0,100%,61%;
 
     --letter-spacing-minus-one: 0.01em;
     --letter-spacing-minus-two: 0.02em;
@@ -109,10 +111,25 @@ body {
 .main-layout {
   padding: 20px 64px;
 }
+.main-layout-body {
+  padding: 0 64px;
+  margin-top: 48px
+}
+.leaflet-container {
+  background: #f0f0f0 !important;
+}
 
 @layer base {
   * {
     @apply border-border;
+  }
+
+  .form-label {
+    @apply paragraph-medium2-medium text-customBlack-400
+  }
+
+  .primary-btn {
+    @apply bg-primaryGreen-500 w-full h-[44px] flex items-center justify-center text-white outline-none paragraph-medium-bold rounded-md hover:bg-primaryGreen-600 transition
   }
 
   /* logoText  */
@@ -205,6 +222,9 @@ body {
   }
   .paragraph-medium-medium {
     @apply text-paragraph-medium -tracking--1% font-inter leading-24 font-medium
+  }
+    .paragraph-medium2-medium {
+    @apply text-[15px] -tracking--1% font-inter leading-24 font-medium
   }
   .paragraph-medium-semibold {
     @apply text-paragraph-medium -tracking--1% font-inter leading-24 font-semibold

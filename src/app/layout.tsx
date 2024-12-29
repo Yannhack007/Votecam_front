@@ -5,6 +5,7 @@ import './globals.css';
 import localFont from 'next/font/local';
 import { url } from 'inspector';
 
+
 const poppins = Poppins({
   variable: '--font-poppins',
   subsets: ['latin'],

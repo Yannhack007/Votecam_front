@@ -1,0 +1,1850 @@
+[
+  {
+    "regionName": "Adamaoua",
+    "regionId": "CMR.1_1",
+    "departments": [
+      {
+        "departmentName": "Djerem",
+        "departmentId": "CMR.1.1_1",
+        "arrondissements": [
+          {
+            "name": "Ngaoundal",
+            "arrondissementId": "CMR.1.1.1_1"
+          },
+          {
+            "name": "Tibati",
+            "arrondissementId": "CMR.1.1.2_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Faro et Déo",
+        "departmentId": "CMR.1.2_1",
+        "arrondissements": [
+          {
+            "name": "Galim Tignère",
+            "arrondissementId": "CMR.1.2.1_1"
+          },
+          {
+            "name": "Mayo Baléo",
+            "arrondissementId": "CMR.1.2.2_1"
+          },
+          {
+            "name": "Tignère",
+            "arrondissementId": "CMR.1.2.3_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mayo Banyo",
+        "departmentId": "CMR.1.3_1",
+        "arrondissements": [
+          {
+            "name": "Bankim",
+            "arrondissementId": "CMR.1.3.1_1"
+          },
+          {
+            "name": "Banyo",
+            "arrondissementId": "CMR.1.3.2_1"
+          },
+          {
+            "name": "Mayo Darlé",
+            "arrondissementId": "CMR.1.3.3_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mbéré",
+        "departmentId": "CMR.1.4_1",
+        "arrondissements": [
+          {
+            "name": "Dir",
+            "arrondissementId": "CMR.1.4.1_1"
+          },
+          {
+            "name": "Djohong",
+            "arrondissementId": "CMR.1.4.2_1"
+          },
+          {
+            "name": "Meiganga",
+            "arrondissementId": "CMR.1.4.3_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Vina",
+        "departmentId": "CMR.1.5_1",
+        "arrondissements": [
+          {
+            "name": "Belel",
+            "arrondissementId": "CMR.1.5.1_1"
+          },
+          {
+            "name": "Martap",
+            "arrondissementId": "CMR.1.5.2_1"
+          },
+          {
+            "name": "Mbé",
+            "arrondissementId": "CMR.1.5.3_1"
+          },
+          {
+            "name": "Nganha",
+            "arrondissementId": "CMR.1.5.4_1"
+          },
+          {
+            "name": "Ngaoundéré 1",
+            "arrondissementId": "CMR.1.5.5_1"
+          },
+          {
+            "name": "Ngaoundéré 2",
+            "arrondissementId": "CMR.1.5.6_1"
+          },
+          {
+            "name": "Ngaoundéré 3",
+            "arrondissementId": "CMR.1.5.7_1"
+          },
+          {
+            "name": "Nyambaka",
+            "arrondissementId": "CMR.1.5.8_1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "regionName": "Centre",
+    "regionId": "CMR.2_1",
+    "departments": [
+      {
+        "departmentName": "Haute Sanaga",
+        "departmentId": "CMR.2.1_1",
+        "arrondissements": [
+          {
+            "name": "Bibé",
+            "arrondissementId": "CMR.2.1.1_1"
+          },
+          {
+            "name": "Lembé Yézoum",
+            "arrondissementId": "CMR.2.1.2_1"
+          },
+          {
+            "name": "Mbandjock",
+            "arrondissementId": "CMR.2.1.3_1"
+          },
+          {
+            "name": "Minta",
+            "arrondissementId": "CMR.2.1.4_1"
+          },
+          {
+            "name": "Nanga Eboko",
+            "arrondissementId": "CMR.2.1.5_1"
+          },
+          {
+            "name": "Nkoteng",
+            "arrondissementId": "CMR.2.1.6_1"
+          },
+          {
+            "name": "Nsem",
+            "arrondissementId": "CMR.2.1.7_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Lekié",
+        "departmentId": "CMR.2.2_1",
+        "arrondissements": [
+          {
+            "name": "Batchenga",
+            "arrondissementId": "CMR.2.2.1_1"
+          },
+          {
+            "name": "Ebebda",
+            "arrondissementId": "CMR.2.2.2_1"
+          },
+          {
+            "name": "Elig Mfomo",
+            "arrondissementId": "CMR.2.2.3_1"
+          },
+          {
+            "name": "Evodoula",
+            "arrondissementId": "CMR.2.2.4_1"
+          },
+          {
+            "name": "Lobo",
+            "arrondissementId": "CMR.2.2.5_1"
+          },
+          {
+            "name": "Monatelé",
+            "arrondissementId": "CMR.2.2.6_1"
+          },
+          {
+            "name": "Obala",
+            "arrondissementId": "CMR.2.2.7_1"
+          },
+          {
+            "name": "Okola",
+            "arrondissementId": "CMR.2.2.8_1"
+          },
+          {
+            "name": "Sa'a",
+            "arrondissementId": "CMR.2.2.9_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mbam et Inoubou",
+        "departmentId": "CMR.2.3_1",
+        "arrondissements": [
+          {
+            "name": "Bafia",
+            "arrondissementId": "CMR.2.3.1_1"
+          },
+          {
+            "name": "Bokito",
+            "arrondissementId": "CMR.2.3.2_1"
+          },
+          {
+            "name": "Deuk",
+            "arrondissementId": "CMR.2.3.3_1"
+          },
+          {
+            "name": "Kiiki",
+            "arrondissementId": "CMR.2.3.4_1"
+          },
+          {
+            "name": "Kon-Yambetta",
+            "arrondissementId": "CMR.2.3.5_1"
+          },
+          {
+            "name": "Makénéné",
+            "arrondissementId": "CMR.2.3.6_1"
+          },
+          {
+            "name": "Ndikiniméki",
+            "arrondissementId": "CMR.2.3.7_1"
+          },
+          {
+            "name": "Ntoukou",
+            "arrondissementId": "CMR.2.3.8_1"
+          },
+          {
+            "name": "Ombessa",
+            "arrondissementId": "CMR.2.3.9_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mbam et Kim",
+        "departmentId": "CMR.2.4_1",
+        "arrondissements": [
+          {
+            "name": "Mbangassina",
+            "arrondissementId": "CMR.2.4.1_1"
+          },
+          {
+            "name": "Ngambé Tikar",
+            "arrondissementId": "CMR.2.4.2_1"
+          },
+          {
+            "name": "Ngoro",
+            "arrondissementId": "CMR.2.4.3_1"
+          },
+          {
+            "name": "Ntui",
+            "arrondissementId": "CMR.2.4.4_1"
+          },
+          {
+            "name": "Yoko",
+            "arrondissementId": "CMR.2.4.5_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mefou et Afamba",
+        "departmentId": "CMR.2.5_1",
+        "arrondissements": [
+          {
+            "name": "Afanloum",
+            "arrondissementId": "CMR.2.5.1_1"
+          },
+          {
+            "name": "Assamba",
+            "arrondissementId": "CMR.2.5.2_1"
+          },
+          {
+            "name": "Awaé",
+            "arrondissementId": "CMR.2.5.3_1"
+          },
+          {
+            "name": "Edzendouan",
+            "arrondissementId": "CMR.2.5.4_1"
+          },
+          {
+            "name": "Esse",
+            "arrondissementId": "CMR.2.5.5_1"
+          },
+          {
+            "name": "Mfou",
+            "arrondissementId": "CMR.2.5.6_1"
+          },
+          {
+            "name": "Nlolofamba",
+            "arrondissementId": "CMR.2.5.7_1"
+          },
+          {
+            "name": "Soa",
+            "arrondissementId": "CMR.2.5.8_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mefou et Akono",
+        "departmentId": "CMR.2.6_1",
+        "arrondissements": [
+          {
+            "name": "Akono",
+            "arrondissementId": "CMR.2.6.1_1"
+          },
+          {
+            "name": "Bikok",
+            "arrondissementId": "CMR.2.6.2_1"
+          },
+          {
+            "name": "Mbankomo",
+            "arrondissementId": "CMR.2.6.3_1"
+          },
+          {
+            "name": "Ngoumou",
+            "arrondissementId": "CMR.2.6.4_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mfoundi",
+        "departmentId": "CMR.2.7_1",
+        "arrondissements": [
+          {
+            "name": "Yaoundé 1",
+            "arrondissementId": "CMR.2.7.1_1"
+          },
+          {
+            "name": "Yaoundé 2",
+            "arrondissementId": "CMR.2.7.2_1"
+          },
+          {
+            "name": "Yaoundé 3",
+            "arrondissementId": "CMR.2.7.3_1"
+          },
+          {
+            "name": "Yaoundé 4",
+            "arrondissementId": "CMR.2.7.4_1"
+          },
+          {
+            "name": "Yaoundé 5",
+            "arrondissementId": "CMR.2.7.5_1"
+          },
+          {
+            "name": "Yaoundé 6",
+            "arrondissementId": "CMR.2.7.6_1"
+          },
+          {
+            "name": "Yaoundé 7",
+            "arrondissementId": "CMR.2.7.7_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Nyong et Kéllé",
+        "departmentId": "CMR.2.8_1",
+        "arrondissements": [
+          {
+            "name": "Biyouha",
+            "arrondissementId": "CMR.2.8.1_1"
+          },
+          {
+            "name": "Bondjock",
+            "arrondissementId": "CMR.2.8.2_1"
+          },
+          {
+            "name": "Bot Makak",
+            "arrondissementId": "CMR.2.8.3_1"
+          },
+          {
+            "name": "Dibang",
+            "arrondissementId": "CMR.2.8.4_1"
+          },
+          {
+            "name": "Eséka",
+            "arrondissementId": "CMR.2.8.5_1"
+          },
+          {
+            "name": "Makak",
+            "arrondissementId": "CMR.2.8.6_1"
+          },
+          {
+            "name": "Matomb",
+            "arrondissementId": "CMR.2.8.7_1"
+          },
+          {
+            "name": "Messondo",
+            "arrondissementId": "CMR.2.8.8_1"
+          },
+          {
+            "name": "Ngog Mapubi",
+            "arrondissementId": "CMR.2.8.9_1"
+          },
+          {
+            "name": "Nguibassal",
+            "arrondissementId": "CMR.2.8.10_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Nyong et Mfoumou",
+        "departmentId": "CMR.2.9_1",
+        "arrondissements": [
+          {
+            "name": "Akonolinga",
+            "arrondissementId": "CMR.2.9.1_1"
+          },
+          {
+            "name": "Ayos",
+            "arrondissementId": "CMR.2.9.2_1"
+          },
+          {
+            "name": "Endom",
+            "arrondissementId": "CMR.2.9.3_1"
+          },
+          {
+            "name": "Mengang",
+            "arrondissementId": "CMR.2.9.4_1"
+          },
+          {
+            "name": "Nyakokombo",
+            "arrondissementId": "CMR.2.9.5_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Nyong et So'o",
+        "departmentId": "CMR.2.10_1",
+        "arrondissements": [
+          {
+            "name": "Akoéman",
+            "arrondissementId": "CMR.2.10.1_1"
+          },
+          {
+            "name": "Dzeng",
+            "arrondissementId": "CMR.2.10.2_1"
+          },
+          {
+            "name": "Mbalmayo",
+            "arrondissementId": "CMR.2.10.3_1"
+          },
+          {
+            "name": "Mengueme",
+            "arrondissementId": "CMR.2.10.4_1"
+          },
+          {
+            "name": "Ngomedzap",
+            "arrondissementId": "CMR.2.10.5_1"
+          },
+          {
+            "name": "Nkolmetet",
+            "arrondissementId": "CMR.2.10.6_1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "regionName": "Est",
+    "regionId": "CMR.3_1",
+    "departments": [
+      {
+        "departmentName": "Boumba et Ngoko",
+        "departmentId": "CMR.3.1_1",
+        "arrondissements": [
+          {
+            "name": "Gari Gombo",
+            "arrondissementId": "CMR.3.1.1_1"
+          },
+          {
+            "name": "Moloundou",
+            "arrondissementId": "CMR.3.1.2_1"
+          },
+          {
+            "name": "Salapoumbé",
+            "arrondissementId": "CMR.3.1.3_1"
+          },
+          {
+            "name": "Yokadouma",
+            "arrondissementId": "CMR.3.1.4_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Haut Nyong",
+        "departmentId": "CMR.3.2_1",
+        "arrondissements": [
+          {
+            "name": "Abong Mbang",
+            "arrondissementId": "CMR.3.2.1_1"
+          },
+          {
+            "name": "Atok",
+            "arrondissementId": "CMR.3.2.2_1"
+          },
+          {
+            "name": "Dimako",
+            "arrondissementId": "CMR.3.2.3_1"
+          },
+          {
+            "name": "Dja",
+            "arrondissementId": "CMR.3.2.4_1"
+          },
+          {
+            "name": "Doumé",
+            "arrondissementId": "CMR.3.2.5_1"
+          },
+          {
+            "name": "Doumétang",
+            "arrondissementId": "CMR.3.2.6_1"
+          },
+          {
+            "name": "Lomié",
+            "arrondissementId": "CMR.3.2.7_1"
+          },
+          {
+            "name": "Mboma",
+            "arrondissementId": "CMR.3.2.8_1"
+          },
+          {
+            "name": "Mbouanz",
+            "arrondissementId": "CMR.3.2.9_1"
+          },
+          {
+            "name": "Messamena",
+            "arrondissementId": "CMR.3.2.10_1"
+          },
+          {
+            "name": "Messok",
+            "arrondissementId": "CMR.3.2.11_1"
+          },
+          {
+            "name": "Ngo\u00efla",
+            "arrondissementId": "CMR.3.2.12_1"
+          },
+          {
+            "name": "Nguélémendouga",
+            "arrondissementId": "CMR.3.2.13_1"
+          },
+          {
+            "name": "Somalomo",
+            "arrondissementId": "CMR.3.2.14_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Kadey",
+        "departmentId": "CMR.3.3_1",
+        "arrondissements": [
+          {
+            "name": "Batouri",
+            "arrondissementId": "CMR.3.3.1_1"
+          },
+          {
+            "name": "Bombé",
+            "arrondissementId": "CMR.3.3.2_1"
+          },
+          {
+            "name": "Kétté",
+            "arrondissementId": "CMR.3.3.3_1"
+          },
+          {
+            "name": "Mbang",
+            "arrondissementId": "CMR.3.3.4_1"
+          },
+          {
+            "name": "Mbotoro",
+            "arrondissementId": "CMR.3.3.5_1"
+          },
+          {
+            "name": "Ndélélé",
+            "arrondissementId": "CMR.3.3.6_1"
+          },
+          {
+            "name": "Ndem Nam",
+            "arrondissementId": "CMR.3.3.7_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Lom et Djerem",
+        "departmentId": "CMR.3.4_1",
+        "arrondissements": [
+          {
+            "name": "Bélabo",
+            "arrondissementId": "CMR.3.4.1_1"
+          },
+          {
+            "name": "Bertoua 1",
+            "arrondissementId": "CMR.3.4.2_1"
+          },
+          {
+            "name": "Bertoua 2",
+            "arrondissementId": "CMR.3.4.3_1"
+          },
+          {
+            "name": "Bétaré Oya",
+            "arrondissementId": "CMR.3.4.4_1"
+          },
+          {
+            "name": "Diang",
+            "arrondissementId": "CMR.3.4.5_1"
+          },
+          {
+            "name": "Garoua Boulaî",
+            "arrondissementId": "CMR.3.4.6_1"
+          },
+          {
+            "name": "Mandjou",
+            "arrondissementId": "CMR.3.4.7_1"
+          },
+          {
+            "name": "Ngoura",
+            "arrondissementId": "CMR.3.4.8_1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "regionName": "Extrème-Nord",
+    "regionId": "CMR.4_1",
+    "departments": [
+      {
+        "departmentName": "Diamaré",
+        "departmentId": "CMR.4.1_1",
+        "arrondissements": [
+          {
+            "name": "Bogo",
+            "arrondissementId": "CMR.4.1.1_1"
+          },
+          {
+            "name": "Dargala",
+            "arrondissementId": "CMR.4.1.2_1"
+          },
+          {
+            "name": "Gasawa",
+            "arrondissementId": "CMR.4.1.3_1"
+          },
+          {
+            "name": "Maroua 1",
+            "arrondissementId": "CMR.4.1.4_1"
+          },
+          {
+            "name": "Maroua 2",
+            "arrondissementId": "CMR.4.1.5_1"
+          },
+          {
+            "name": "Maroua 3",
+            "arrondissementId": "CMR.4.1.6_1"
+          },
+          {
+            "name": "Méri",
+            "arrondissementId": "CMR.4.1.7_1"
+          },
+          {
+            "name": "Ndoukoula",
+            "arrondissementId": "CMR.4.1.8_1"
+          },
+          {
+            "name": "Pété",
+            "arrondissementId": "CMR.4.1.9_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Logone et Chari",
+        "departmentId": "CMR.4.2_1",
+        "arrondissements": [
+          {
+            "name": "Blangoua",
+            "arrondissementId": "CMR.4.2.1_1"
+          },
+          {
+            "name": "Darrak",
+            "arrondissementId": "CMR.4.2.2_1"
+          },
+          {
+            "name": "Goulfey",
+            "arrondissementId": "CMR.4.2.3_1"
+          },
+          {
+            "name": "Hilé Alifa",
+            "arrondissementId": "CMR.4.2.4_1"
+          },
+          {
+            "name": "Kousséri",
+            "arrondissementId": "CMR.4.2.5_1"
+          },
+          {
+            "name": "Logone Birni",
+            "arrondissementId": "CMR.4.2.6_1"
+          },
+          {
+            "name": "Makari",
+            "arrondissementId": "CMR.4.2.7_1"
+          },
+          {
+            "name": "Waza",
+            "arrondissementId": "CMR.4.2.8_1"
+          },
+          {
+            "name": "Zina",
+            "arrondissementId": "CMR.4.2.9_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mayo Danay",
+        "departmentId": "CMR.4.3_1",
+        "arrondissements": [
+          {
+            "name": "Datchéka",
+            "arrondissementId": "CMR.4.3.1_1"
+          },
+          {
+            "name": "Gobo",
+            "arrondissementId": "CMR.4.3.2_1"
+          },
+          {
+            "name": "Guéré",
+            "arrondissementId": "CMR.4.3.3_1"
+          },
+          {
+            "name": "Kalfou",
+            "arrondissementId": "CMR.4.3.4_1"
+          },
+          {
+            "name": "Kar Hay",
+            "arrondissementId": "CMR.4.3.5_1"
+          },
+          {
+            "name": "Kay Kay",
+            "arrondissementId": "CMR.4.3.6_1"
+          },
+          {
+            "name": "Maga",
+            "arrondissementId": "CMR.4.3.7_1"
+          },
+          {
+            "name": "Porhi",
+            "arrondissementId": "CMR.4.3.8_1"
+          },
+          {
+            "name": "Tchatibali",
+            "arrondissementId": "CMR.4.3.9_1"
+          },
+          {
+            "name": "Vélé",
+            "arrondissementId": "CMR.4.3.10_1"
+          },
+          {
+            "name": "Wina",
+            "arrondissementId": "CMR.4.3.11_1"
+          },
+          {
+            "name": "Yagoua",
+            "arrondissementId": "CMR.4.3.12_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mayo Kani",
+        "departmentId": "CMR.4.4_1",
+        "arrondissements": [
+          {
+            "name": "Guidiguis",
+            "arrondissementId": "CMR.4.4.1_1"
+          },
+          {
+            "name": "Kaele",
+            "arrondissementId": "CMR.4.4.2_1"
+          },
+          {
+            "name": "Mindif",
+            "arrondissementId": "CMR.4.4.3_1"
+          },
+          {
+            "name": "Montouroua",
+            "arrondissementId": "CMR.4.4.4_1"
+          },
+          {
+            "name": "Moulvouday",
+            "arrondissementId": "CMR.4.4.5_1"
+          },
+          {
+            "name": "Taîbong",
+            "arrondissementId": "CMR.4.4.6_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mayo Sava",
+        "departmentId": "CMR.4.5_1",
+        "arrondissements": [
+          {
+            "name": "Kolofata",
+            "arrondissementId": "CMR.4.5.1_1"
+          },
+          {
+            "name": "Mora",
+            "arrondissementId": "CMR.4.5.2_1"
+          },
+          {
+            "name": "Tokombéré",
+            "arrondissementId": "CMR.4.5.3_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mayo Tsanaga",
+        "departmentId": "CMR.4.6_1",
+        "arrondissements": [
+          {
+            "name": "Bourrah",
+            "arrondissementId": "CMR.4.6.1_1"
+          },
+          {
+            "name": "Hina",
+            "arrondissementId": "CMR.4.6.2_1"
+          },
+          {
+            "name": "Koza",
+            "arrondissementId": "CMR.4.6.3_1"
+          },
+          {
+            "name": "Mayo Moskota",
+            "arrondissementId": "CMR.4.6.4_1"
+          },
+          {
+            "name": "Mogodé",
+            "arrondissementId": "CMR.4.6.5_1"
+          },
+          {
+            "name": "Mokolo",
+            "arrondissementId": "CMR.4.6.6_1"
+          },
+          {
+            "name": "Soulédé Roua",
+            "arrondissementId": "CMR.4.6.7_1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "regionName": "Littoral",
+    "regionId": "CMR.5_1",
+    "departments": [
+      {
+        "departmentName": "Moungo",
+        "departmentId": "CMR.5.1_1",
+        "arrondissements": [
+          {
+            "name": "Baré Bakem",
+            "arrondissementId": "CMR.5.1.1_1"
+          },
+          {
+            "name": "Bonaléa",
+            "arrondissementId": "CMR.5.1.2_1"
+          },
+          {
+            "name": "Dibombari",
+            "arrondissementId": "CMR.5.1.3_1"
+          },
+          {
+            "name": "Loum",
+            "arrondissementId": "CMR.5.1.4_1"
+          },
+          {
+            "name": "Manjo",
+            "arrondissementId": "CMR.5.1.5_1"
+          },
+          {
+            "name": "Mbanga",
+            "arrondissementId": "CMR.5.1.6_1"
+          },
+          {
+            "name": "Melong",
+            "arrondissementId": "CMR.5.1.7_1"
+          },
+          {
+            "name": "Mombo",
+            "arrondissementId": "CMR.5.1.8_1"
+          },
+          {
+            "name": "Njombé Penja",
+            "arrondissementId": "CMR.5.1.9_1"
+          },
+          {
+            "name": "Nkongsamba 1",
+            "arrondissementId": "CMR.5.1.10_1"
+          },
+          {
+            "name": "Nkongsamba 2",
+            "arrondissementId": "CMR.5.1.11_1"
+          },
+          {
+            "name": "Nkongsamba 3",
+            "arrondissementId": "CMR.5.1.12_1"
+          },
+          {
+            "name": "Nlonako",
+            "arrondissementId": "CMR.5.1.13_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Nkam",
+        "departmentId": "CMR.5.2_1",
+        "arrondissements": [
+          {
+            "name": "Baré",
+            "arrondissementId": "CMR.5.2.1_1"
+          },
+          {
+            "name": "Nkondjock",
+            "arrondissementId": "CMR.5.2.2_1"
+          },
+          {
+            "name": "Nord Makombé",
+            "arrondissementId": "CMR.5.2.3_1"
+          },
+          {
+            "name": "Yabassi",
+            "arrondissementId": "CMR.5.2.4_1"
+          },
+          {
+            "name": "Yingui",
+            "arrondissementId": "CMR.5.2.5_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Sanaga Maritime",
+        "departmentId": "CMR.5.3_1",
+        "arrondissements": [
+          {
+            "name": "Dibamba",
+            "arrondissementId": "CMR.5.3.1_1"
+          },
+          {
+            "name": "Dizangué",
+            "arrondissementId": "CMR.5.3.2_1"
+          },
+          {
+            "name": "Douala 6",
+            "arrondissementId": "CMR.5.3.3_1"
+          },
+          {
+            "name": "Edéa 1",
+            "arrondissementId": "CMR.5.3.4_1"
+          },
+          {
+            "name": "Edéa 2",
+            "arrondissementId": "CMR.5.3.5_1"
+          },
+          {
+            "name": "Massok Song Loulou",
+            "arrondissementId": "CMR.5.3.6_1"
+          },
+          {
+            "name": "Mouanko",
+            "arrondissementId": "CMR.5.3.7_1"
+          },
+          {
+            "name": "Ndom",
+            "arrondissementId": "CMR.5.3.8_1"
+          },
+          {
+            "name": "Ngambé",
+            "arrondissementId": "CMR.5.3.9_1"
+          },
+          {
+            "name": "Ngwei",
+            "arrondissementId": "CMR.5.3.10_1"
+          },
+          {
+            "name": "Nyanon",
+            "arrondissementId": "CMR.5.3.11_1"
+          },
+          {
+            "name": "Pouma",
+            "arrondissementId": "CMR.5.3.12_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Wouri",
+        "departmentId": "CMR.5.4_1",
+        "arrondissements": [
+          {
+            "name": "Douala 1",
+            "arrondissementId": "CMR.5.4.1_1"
+          },
+          {
+            "name": "Douala 2",
+            "arrondissementId": "CMR.5.4.2_1"
+          },
+          {
+            "name": "Douala 3",
+            "arrondissementId": "CMR.5.4.3_1"
+          },
+          {
+            "name": "Douala 4",
+            "arrondissementId": "CMR.5.4.4_1"
+          },
+          {
+            "name": "Douala 5",
+            "arrondissementId": "CMR.5.4.5_1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "regionName": "Nord",
+    "regionId": "CMR.7_1",
+    "departments": [
+      {
+        "departmentName": "Bénoué",
+        "departmentId": "CMR.7.1_1",
+        "arrondissements": [
+          {
+            "name": "Bachéo",
+            "arrondissementId": "CMR.7.1.1_1"
+          },
+          {
+            "name": "Bardanké",
+            "arrondissementId": "CMR.7.1.2_1"
+          },
+          {
+            "name": "Bibémi",
+            "arrondissementId": "CMR.7.1.3_1"
+          },
+          {
+            "name": "Dembo",
+            "arrondissementId": "CMR.7.1.4_1"
+          },
+          {
+            "name": "Demsa",
+            "arrondissementId": "CMR.7.1.5_1"
+          },
+          {
+            "name": "Garoua 1",
+            "arrondissementId": "CMR.7.1.6_1"
+          },
+          {
+            "name": "Garoua 2",
+            "arrondissementId": "CMR.7.1.7_1"
+          },
+          {
+            "name": "Garoua 3",
+            "arrondissementId": "CMR.7.1.8_1"
+          },
+          {
+            "name": "Lagdo",
+            "arrondissementId": "CMR.7.1.9_1"
+          },
+          {
+            "name": "Pitoa",
+            "arrondissementId": "CMR.7.1.10_1"
+          },
+          {
+            "name": "Tchéboa",
+            "arrondissementId": "CMR.7.1.11_1"
+          },
+          {
+            "name": "Touroua",
+            "arrondissementId": "CMR.7.1.12_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Faro",
+        "departmentId": "CMR.7.2_1",
+        "arrondissements": [
+          {
+            "name": "Béka",
+            "arrondissementId": "CMR.7.2.1_1"
+          },
+          {
+            "name": "Kontcha",
+            "arrondissementId": "CMR.7.2.2_1"
+          },
+          {
+            "name": "Poli",
+            "arrondissementId": "CMR.7.2.3_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mayo Louti",
+        "departmentId": "CMR.7.3_1",
+        "arrondissements": [
+          {
+            "name": "Figuil",
+            "arrondissementId": "CMR.7.3.1_1"
+          },
+          {
+            "name": "Guider",
+            "arrondissementId": "CMR.7.3.2_1"
+          },
+          {
+            "name": "Mayo Oulo",
+            "arrondissementId": "CMR.7.3.3_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mayo Rey",
+        "departmentId": "CMR.7.4_1",
+        "arrondissements": [
+          {
+            "name": "Madingring",
+            "arrondissementId": "CMR.7.4.1_1"
+          },
+          {
+            "name": "Rey Bouba",
+            "arrondissementId": "CMR.7.4.2_1"
+          },
+          {
+            "name": "Tcholliré",
+            "arrondissementId": "CMR.7.4.3_1"
+          },
+          {
+            "name": "Touboro",
+            "arrondissementId": "CMR.7.4.4_1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "regionName": "Nord-Ouest",
+    "regionId": "CMR.6_1",
+    "departments": [
+      {
+        "departmentName": "Boyo",
+        "departmentId": "CMR.6.1_1",
+        "arrondissements": [
+          {
+            "name": "Belo",
+            "arrondissementId": "CMR.6.1.1_1"
+          },
+          {
+            "name": "Bum",
+            "arrondissementId": "CMR.6.1.2_1"
+          },
+          {
+            "name": "Fundong",
+            "arrondissementId": "CMR.6.1.3_1"
+          },
+          {
+            "name": "Njinikom",
+            "arrondissementId": "CMR.6.1.4_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Bui",
+        "departmentId": "CMR.6.2_1",
+        "arrondissements": [
+          {
+            "name": "Jakiri",
+            "arrondissementId": "CMR.6.2.1_1"
+          },
+          {
+            "name": "Kumbo",
+            "arrondissementId": "CMR.6.2.2_1"
+          },
+          {
+            "name": "Mbven",
+            "arrondissementId": "CMR.6.2.3_1"
+          },
+          {
+            "name": "Nkum",
+            "arrondissementId": "CMR.6.2.4_1"
+          },
+          {
+            "name": "Noni",
+            "arrondissementId": "CMR.6.2.5_1"
+          },
+          {
+            "name": "Oku",
+            "arrondissementId": "CMR.6.2.6_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Donga Mantung",
+        "departmentId": "CMR.6.3_1",
+        "arrondissements": [
+          {
+            "name": "Ako",
+            "arrondissementId": "CMR.6.3.1_1"
+          },
+          {
+            "name": "Misaje",
+            "arrondissementId": "CMR.6.3.2_1"
+          },
+          {
+            "name": "Ndu",
+            "arrondissementId": "CMR.6.3.3_1"
+          },
+          {
+            "name": "Nkambe",
+            "arrondissementId": "CMR.6.3.4_1"
+          },
+          {
+            "name": "Nwa",
+            "arrondissementId": "CMR.6.3.5_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Menchum",
+        "departmentId": "CMR.6.4_1",
+        "arrondissements": [
+          {
+            "name": "Fungom",
+            "arrondissementId": "CMR.6.4.1_1"
+          },
+          {
+            "name": "Furu Awa",
+            "arrondissementId": "CMR.6.4.2_1"
+          },
+          {
+            "name": "Menchum Valley",
+            "arrondissementId": "CMR.6.4.3_1"
+          },
+          {
+            "name": "Wum",
+            "arrondissementId": "CMR.6.4.4_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mezam",
+        "departmentId": "CMR.6.5_1",
+        "arrondissements": [
+          {
+            "name": "Bafut",
+            "arrondissementId": "CMR.6.5.1_1"
+          },
+          {
+            "name": "Bali",
+            "arrondissementId": "CMR.6.5.2_1"
+          },
+          {
+            "name": "Bamenda 1",
+            "arrondissementId": "CMR.6.5.3_1"
+          },
+          {
+            "name": "Bamenda 2",
+            "arrondissementId": "CMR.6.5.4_1"
+          },
+          {
+            "name": "Bamenda 3",
+            "arrondissementId": "CMR.6.5.5_1"
+          },
+          {
+            "name": "Santa",
+            "arrondissementId": "CMR.6.5.6_1"
+          },
+          {
+            "name": "Tubah",
+            "arrondissementId": "CMR.6.5.7_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Momo",
+        "departmentId": "CMR.6.6_1",
+        "arrondissements": [
+          {
+            "name": "Batibo",
+            "arrondissementId": "CMR.6.6.1_1"
+          },
+          {
+            "name": "Mbeggwi",
+            "arrondissementId": "CMR.6.6.2_1"
+          },
+          {
+            "name": "Ngie",
+            "arrondissementId": "CMR.6.6.3_1"
+          },
+          {
+            "name": "Njikwa",
+            "arrondissementId": "CMR.6.6.4_1"
+          },
+          {
+            "name": "Widikum Menka",
+            "arrondissementId": "CMR.6.6.5_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Ngo Ketunjia",
+        "departmentId": "CMR.6.7_1",
+        "arrondissements": [
+          {
+            "name": "Babessi",
+            "arrondissementId": "CMR.6.7.1_1"
+          },
+          {
+            "name": "Balikumbat",
+            "arrondissementId": "CMR.6.7.2_1"
+          },
+          {
+            "name": "Ndop",
+            "arrondissementId": "CMR.6.7.3_1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "regionName": "Ouest",
+    "regionId": "CMR.8_1",
+    "departments": [
+      {
+        "departmentName": "Bamboutos",
+        "departmentId": "CMR.8.1_1",
+        "arrondissements": [
+          {
+            "name": "Babadjou",
+            "arrondissementId": "CMR.8.1.1_1"
+          },
+          {
+            "name": "Batcham",
+            "arrondissementId": "CMR.8.1.2_1"
+          },
+          {
+            "name": "Galim",
+            "arrondissementId": "CMR.8.1.3_1"
+          },
+          {
+            "name": "Mbouda",
+            "arrondissementId": "CMR.8.1.4_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Haut Nkam",
+        "departmentId": "CMR.8.2_1",
+        "arrondissements": [
+          {
+            "name": "Bafang",
+            "arrondissementId": "CMR.8.2.1_1"
+          },
+          {
+            "name": "Bakou",
+            "arrondissementId": "CMR.8.2.2_1"
+          },
+          {
+            "name": "Bana",
+            "arrondissementId": "CMR.8.2.3_1"
+          },
+          {
+            "name": "Bandja",
+            "arrondissementId": "CMR.8.2.4_1"
+          },
+          {
+            "name": "Banka",
+            "arrondissementId": "CMR.8.2.5_1"
+          },
+          {
+            "name": "Banwa",
+            "arrondissementId": "CMR.8.2.6_1"
+          },
+          {
+            "name": "Kekem",
+            "arrondissementId": "CMR.8.2.7_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Hauts Plateaux",
+        "departmentId": "CMR.8.3_1",
+        "arrondissements": [
+          {
+            "name": "Baham",
+            "arrondissementId": "CMR.8.3.1_1"
+          },
+          {
+            "name": "Bamendjou",
+            "arrondissementId": "CMR.8.3.2_1"
+          },
+          {
+            "name": "Bangou",
+            "arrondissementId": "CMR.8.3.3_1"
+          },
+          {
+            "name": "Batie",
+            "arrondissementId": "CMR.8.3.4_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Koung Khi",
+        "departmentId": "CMR.8.4_1",
+        "arrondissements": [
+          {
+            "name": "Bandjoun",
+            "arrondissementId": "CMR.8.4.1_1"
+          },
+          {
+            "name": "Bayangam",
+            "arrondissementId": "CMR.8.4.2_1"
+          },
+          {
+            "name": "Djemrem",
+            "arrondissementId": "CMR.8.4.3_1"
+          },
+          {
+            "name": "Poumegne",
+            "arrondissementId": "CMR.8.4.4_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Menoua",
+        "departmentId": "CMR.8.5_1",
+        "arrondissements": [
+          {
+            "name": "Dschang",
+            "arrondissementId": "CMR.8.5.1_1"
+          },
+          {
+            "name": "Fokoue",
+            "arrondissementId": "CMR.8.5.2_1"
+          },
+          {
+            "name": "Fongo Tongo",
+            "arrondissementId": "CMR.8.5.3_1"
+          },
+          {
+            "name": "Nkong-Nkhi",
+            "arrondissementId": "CMR.8.5.4_1"
+          },
+          {
+            "name": "Penka Michel",
+            "arrondissementId": "CMR.8.5.5_1"
+          },
+          {
+            "name": "Santchou",
+            "arrondissementId": "CMR.8.5.6_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mifi",
+        "departmentId": "CMR.8.6_1",
+        "arrondissements": [
+          {
+            "name": "Bafoussam 1",
+            "arrondissementId": "CMR.8.6.1_1"
+          },
+          {
+            "name": "Bafoussam 2",
+            "arrondissementId": "CMR.8.6.2_1"
+          },
+          {
+            "name": "Bafoussam 3",
+            "arrondissementId": "CMR.8.6.3_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Ndé",
+        "departmentId": "CMR.8.7_1",
+        "arrondissements": [
+          {
+            "name": "Bangangté",
+            "arrondissementId": "CMR.8.7.1_1"
+          },
+          {
+            "name": "Bassamba",
+            "arrondissementId": "CMR.8.7.2_1"
+          },
+          {
+            "name": "Bazou",
+            "arrondissementId": "CMR.8.7.3_1"
+          },
+          {
+            "name": "Tonga",
+            "arrondissementId": "CMR.8.7.4_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Noun",
+        "departmentId": "CMR.8.8_1",
+        "arrondissements": [
+          {
+            "name": "Bangourain",
+            "arrondissementId": "CMR.8.8.1_1"
+          },
+          {
+            "name": "Foumban",
+            "arrondissementId": "CMR.8.8.2_1"
+          },
+          {
+            "name": "Foumbot",
+            "arrondissementId": "CMR.8.8.3_1"
+          },
+          {
+            "name": "Kouoptamo",
+            "arrondissementId": "CMR.8.8.4_1"
+          },
+          {
+            "name": "Koutaba",
+            "arrondissementId": "CMR.8.8.5_1"
+          },
+          {
+            "name": "Magba",
+            "arrondissementId": "CMR.8.8.6_1"
+          },
+          {
+            "name": "Malantouen",
+            "arrondissementId": "CMR.8.8.7_1"
+          },
+          {
+            "name": "Massangam",
+            "arrondissementId": "CMR.8.8.8_1"
+          },
+          {
+            "name": "Njimom",
+            "arrondissementId": "CMR.8.8.9_1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "regionName": "Sud",
+    "regionId": "CMR.10_1",
+    "departments": [
+      {
+        "departmentName": "Dja et Lobo",
+        "departmentId": "CMR.10.1_1",
+        "arrondissements": [
+          {
+            "name": "Bengbis",
+            "arrondissementId": "CMR.10.1.1_1"
+          },
+          {
+            "name": "Djoum",
+            "arrondissementId": "CMR.10.1.2_1"
+          },
+          {
+            "name": "Meyomessala",
+            "arrondissementId": "CMR.10.1.3_1"
+          },
+          {
+            "name": "Meyomessi",
+            "arrondissementId": "CMR.10.1.4_1"
+          },
+          {
+            "name": "Mintom 2",
+            "arrondissementId": "CMR.10.1.5_1"
+          },
+          {
+            "name": "Oveng",
+            "arrondissementId": "CMR.10.1.6_1"
+          },
+          {
+            "name": "Sangmélima",
+            "arrondissementId": "CMR.10.1.7_1"
+          },
+          {
+            "name": "Zoétélé",
+            "arrondissementId": "CMR.10.1.8_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Mvila",
+        "departmentId": "CMR.10.2_1",
+        "arrondissements": [
+          {
+            "name": "Biwong Bane",
+            "arrondissementId": "CMR.10.2.1_1"
+          },
+          {
+            "name": "Biwong Bulu",
+            "arrondissementId": "CMR.10.2.2_1"
+          },
+          {
+            "name": "Ebolowa 1",
+            "arrondissementId": "CMR.10.2.3_1"
+          },
+          {
+            "name": "Ebolowa 2",
+            "arrondissementId": "CMR.10.2.4_1"
+          },
+          {
+            "name": "Efoulan",
+            "arrondissementId": "CMR.10.2.5_1"
+          },
+          {
+            "name": "Mengong",
+            "arrondissementId": "CMR.10.2.6_1"
+          },
+          {
+            "name": "Mvangan",
+            "arrondissementId": "CMR.10.2.7_1"
+          },
+          {
+            "name": "Ngoulémakong",
+            "arrondissementId": "CMR.10.2.8_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Océan",
+        "departmentId": "CMR.10.3_1",
+        "arrondissements": [
+          {
+            "name": "Akom 2",
+            "arrondissementId": "CMR.10.3.1_1"
+          },
+          {
+            "name": "Bipindi",
+            "arrondissementId": "CMR.10.3.2_1"
+          },
+          {
+            "name": "Campo",
+            "arrondissementId": "CMR.10.3.3_1"
+          },
+          {
+            "name": "Kribi 1",
+            "arrondissementId": "CMR.10.3.4_1"
+          },
+          {
+            "name": "Kribi 2",
+            "arrondissementId": "CMR.10.3.5_1"
+          },
+          {
+            "name": "Lokoundje",
+            "arrondissementId": "CMR.10.3.6_1"
+          },
+          {
+            "name": "Lolodorf",
+            "arrondissementId": "CMR.10.3.7_1"
+          },
+          {
+            "name": "Mvengué",
+            "arrondissementId": "CMR.10.3.8_1"
+          },
+          {
+            "name": "Nyé'été",
+            "arrondissementId": "CMR.10.3.9_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Vallée du Ntem",
+        "departmentId": "CMR.10.4_1",
+        "arrondissements": [
+          {
+            "name": "Ambam",
+            "arrondissementId": "CMR.10.4.1_1"
+          },
+          {
+            "name": "Kyé Ossi",
+            "arrondissementId": "CMR.10.4.2_1"
+          },
+          {
+            "name": "Ma'an",
+            "arrondissementId": "CMR.10.4.3_1"
+          },
+          {
+            "name": "Olamzé",
+            "arrondissementId": "CMR.10.4.4_1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "regionName": "Sud-Ouest",
+    "regionId": "CMR.9_1",
+    "departments": [
+      {
+        "departmentName": "Fako",
+        "departmentId": "CMR.9.1_1",
+        "arrondissements": [
+          {
+            "name": "Buéa",
+            "arrondissementId": "CMR.9.1.1_1"
+          },
+          {
+            "name": "Limbé 1",
+            "arrondissementId": "CMR.9.1.2_1"
+          },
+          {
+            "name": "Limbé 2",
+            "arrondissementId": "CMR.9.1.3_1"
+          },
+          {
+            "name": "Limbé 3",
+            "arrondissementId": "CMR.9.1.4_1"
+          },
+          {
+            "name": "Muyuka",
+            "arrondissementId": "CMR.9.1.5_1"
+          },
+          {
+            "name": "Tiko",
+            "arrondissementId": "CMR.9.1.6_1"
+          },
+          {
+            "name": "West Coast",
+            "arrondissementId": "CMR.9.1.7_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Koupé Manengouba",
+        "departmentId": "CMR.9.2_1",
+        "arrondissements": [
+          {
+            "name": "Bangem",
+            "arrondissementId": "CMR.9.2.1_1"
+          },
+          {
+            "name": "Nguti",
+            "arrondissementId": "CMR.9.2.2_1"
+          },
+          {
+            "name": "Tombel",
+            "arrondissementId": "CMR.9.2.3_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Lebialem",
+        "departmentId": "CMR.9.3_1",
+        "arrondissements": [
+          {
+            "name": "Alou",
+            "arrondissementId": "CMR.9.3.1_1"
+          },
+          {
+            "name": "Fontem",
+            "arrondissementId": "CMR.9.3.2_1"
+          },
+          {
+            "name": "Wabane",
+            "arrondissementId": "CMR.9.3.3_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Manyu",
+        "departmentId": "CMR.9.4_1",
+        "arrondissements": [
+          {
+            "name": "Akwaya",
+            "arrondissementId": "CMR.9.4.1_1"
+          },
+          {
+            "name": "Eyumodjock",
+            "arrondissementId": "CMR.9.4.2_1"
+          },
+          {
+            "name": "Mamfé",
+            "arrondissementId": "CMR.9.4.3_1"
+          },
+          {
+            "name": "Upper Bayang",
+            "arrondissementId": "CMR.9.4.4_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Meme",
+        "departmentId": "CMR.9.5_1",
+        "arrondissements": [
+          {
+            "name": "Konye",
+            "arrondissementId": "CMR.9.5.1_1"
+          },
+          {
+            "name": "Kumba 1",
+            "arrondissementId": "CMR.9.5.2_1"
+          },
+          {
+            "name": "Kumba 2",
+            "arrondissementId": "CMR.9.5.3_1"
+          },
+          {
+            "name": "Kumba 3",
+            "arrondissementId": "CMR.9.5.4_1"
+          },
+          {
+            "name": "Mbongé",
+            "arrondissementId": "CMR.9.5.5_1"
+          }
+        ]
+      },
+      {
+        "departmentName": "Ndian",
+        "departmentId": "CMR.9.6_1",
+        "arrondissements": [
+          {
+            "name": "Bamuso",
+            "arrondissementId": "CMR.9.6.1_1"
+          },
+          {
+            "name": "Dikome value",
+            "arrondissementId": "CMR.9.6.2_1"
+          },
+          {
+            "name": "Ekondo Titi",
+            "arrondissementId": "CMR.9.6.3_1"
+          },
+          {
+            "name": "Idabato",
+            "arrondissementId": "CMR.9.6.4_1"
+          },
+          {
+            "name": "Isangele",
+            "arrondissementId": "CMR.9.6.5_1"
+          },
+          {
+            "name": "Kombo Abedimo",
+            "arrondissementId": "CMR.9.6.6_1"
+          },
+          {
+            "name": "Kombo Etindi",
+            "arrondissementId": "CMR.9.6.7_1"
+          },
+          {
+            "name": "Mundemba",
+            "arrondissementId": "CMR.9.6.8_1"
+          },
+          {
+            "name": "Toko",
+            "arrondissementId": "CMR.9.6.9_1"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,234 @@
+[
+    {
+        "name": "Djerem",
+        "id": "CMR.1.1_1"
+    },
+    {
+        "name": "Faro et Déo",
+        "id": "CMR.1.2_1"
+    },
+    {
+        "name": "Mayo Banyo",
+        "id": "CMR.1.3_1"
+    },
+    {
+        "name": "Mbéré",
+        "id": "CMR.1.4_1"
+    },
+    {
+        "name": "Vina",
+        "id": "CMR.1.5_1"
+    },
+    {
+        "name": "Haute Sanaga",
+        "id": "CMR.2.1_1"
+    },
+    {
+        "name": "Lekié",
+        "id": "CMR.2.2_1"
+    },
+    {
+        "name": "Mbam et Inoubou",
+        "id": "CMR.2.3_1"
+    },
+    {
+        "name": "Mbam et Kim",
+        "id": "CMR.2.4_1"
+    },
+    {
+        "name": "Mefou et Afamba",
+        "id": "CMR.2.5_1"
+    },
+    {
+        "name": "Mefou et Akono",
+        "id": "CMR.2.6_1"
+    },
+    {
+        "name": "Mfoundi",
+        "id": "CMR.2.7_1"
+    },
+    {
+        "name": "Nyong et Kéllé",
+        "id": "CMR.2.8_1"
+    },
+    {
+        "name": "Nyong et Mfoumou",
+        "id": "CMR.2.9_1"
+    },
+    {
+        "name": "Nyong et So'o",
+        "id": "CMR.2.10_1"
+    },
+    {
+        "name": "Boumba et Ngoko",
+        "id": "CMR.3.1_1"
+    },
+    {
+        "name": "Haut Nyong",
+        "id": "CMR.3.2_1"
+    },
+    {
+        "name": "Kadey",
+        "id": "CMR.3.3_1"
+    },
+    {
+        "name": "Lom et Djerem",
+        "id": "CMR.3.4_1"
+    },
+    {
+        "name": "Diamaré",
+        "id": "CMR.4.1_1"
+    },
+    {
+        "name": "Logone et Chari",
+        "id": "CMR.4.2_1"
+    },
+    {
+        "name": "Mayo Danay",
+        "id": "CMR.4.3_1"
+    },
+    {
+        "name": "Mayo Kani",
+        "id": "CMR.4.4_1"
+    },
+    {
+        "name": "Mayo Sava",
+        "id": "CMR.4.5_1"
+    },
+    {
+        "name": "Mayo Tsanaga",
+        "id": "CMR.4.6_1"
+    },
+    {
+        "name": "Moungo",
+        "id": "CMR.5.1_1"
+    },
+    {
+        "name": "Nkam",
+        "id": "CMR.5.2_1"
+    },
+    {
+        "name": "Sanaga Maritime",
+        "id": "CMR.5.3_1"
+    },
+    {
+        "name": "Wouri",
+        "id": "CMR.5.4_1"
+    },
+    {
+        "name": "Bénoué",
+        "id": "CMR.7.1_1"
+    },
+    {
+        "name": "Faro",
+        "id": "CMR.7.2_1"
+    },
+    {
+        "name": "Mayo Louti",
+        "id": "CMR.7.3_1"
+    },
+    {
+        "name": "Mayo Rey",
+        "id": "CMR.7.4_1"
+    },
+    {
+        "name": "Boyo",
+        "id": "CMR.6.1_1"
+    },
+    {
+        "name": "Bui",
+        "id": "CMR.6.2_1"
+    },
+    {
+        "name": "Donga Mantung",
+        "id": "CMR.6.3_1"
+    },
+    {
+        "name": "Menchum",
+        "id": "CMR.6.4_1"
+    },
+    {
+        "name": "Mezam",
+        "id": "CMR.6.5_1"
+    },
+    {
+        "name": "Momo",
+        "id": "CMR.6.6_1"
+    },
+    {
+        "name": "Ngo Ketunjia",
+        "id": "CMR.6.7_1"
+    },
+    {
+        "name": "Bamboutos",
+        "id": "CMR.8.1_1"
+    },
+    {
+        "name": "Haut Nkam",
+        "id": "CMR.8.2_1"
+    },
+    {
+        "name": "Hauts Plateaux",
+        "id": "CMR.8.3_1"
+    },
+    {
+        "name": "Koung Khi",
+        "id": "CMR.8.4_1"
+    },
+    {
+        "name": "Menoua",
+        "id": "CMR.8.5_1"
+    },
+    {
+        "name": "Mifi",
+        "id": "CMR.8.6_1"
+    },
+    {
+        "name": "Ndé",
+        "id": "CMR.8.7_1"
+    },
+    {
+        "name": "Noun",
+        "id": "CMR.8.8_1"
+    },
+    {
+        "name": "Dja et Lobo",
+        "id": "CMR.10.1_1"
+    },
+    {
+        "name": "Mvila",
+        "id": "CMR.10.2_1"
+    },
+    {
+        "name": "Océan",
+        "id": "CMR.10.3_1"
+    },
+    {
+        "name": "Vallée du Ntem",
+        "id": "CMR.10.4_1"
+    },
+    {
+        "name": "Fako",
+        "id": "CMR.9.1_1"
+    },
+    {
+        "name": "Koupé Manengouba",
+        "id": "CMR.9.2_1"
+    },
+    {
+        "name": "Lebialem",
+        "id": "CMR.9.3_1"
+    },
+    {
+        "name": "Manyu",
+        "id": "CMR.9.4_1"
+    },
+    {
+        "name": "Meme",
+        "id": "CMR.9.5_1"
+    },
+    {
+        "name": "Ndian",
+        "id": "CMR.9.6_1"
+    }
+]
