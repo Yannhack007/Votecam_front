@@ -61,6 +61,7 @@ body {
     --radius: 0.5rem;
 
     --primary-green-500 : #00B88C;
+    --primary-green-50 : #E6F8F4;
     --primary-green-600 : #00A77F;
     --primary-green-700 : #008363;
     --secondary-green-500 : #023D26;
@@ -78,6 +79,14 @@ body {
     --letter-spacing-minus-one: 0.01em;
     --letter-spacing-minus-two: 0.02em;
     --letter-spacing-minus-three: 0.03em;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 93%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
 
   }
   .dark {
@@ -105,6 +114,14 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -116,8 +133,19 @@ body {
   margin-top: 48px
 }
 .leaflet-container {
-  background: #f0f0f0 !important;
+  background: #f2f2f2 !important;
 }
+/* .\[\&\>svg\]\:size-4 > svg {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+} */
+
+.notfound {
+  text-shadow: 1px 0px 10px;
+  color: var(--primary-green-500)
+}
+
+
 
 @layer base {
   * {
@@ -265,4 +293,15 @@ body {
   /* body {
     @apply bg-background text-foreground;
   } */
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
 }

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Adamaoua",
+    "id": "CMR.1_1"
+  },
+  {
+    "name": "Centre",
+    "id": "CMR.2_1"
+  },
+  {
+    "name": "Est",
+    "id": "CMR.3_1"
+  },
+  {
+    "name": "Extrême-Nord",
+    "id": "CMR.4_1"
+  },
+  {
+    "name": "Littoral",
+    "id": "CMR.5_1"
+  },
+  {
+    "name": "Nord",
+    "id": "CMR.7_1"
+  },
+  {
+    "name": "Nord-Ouest",
+    "id": "CMR.6_1"
+  },
+  {
+    "name": "Ouest",
+    "id": "CMR.8_1"
+  },
+  {
+    "name": "Sud",
+    "id": "CMR.10_1"
+  },
+  {
+    "name": "Sud-Ouest",
+    "id": "CMR.9_1"
+  }
+]

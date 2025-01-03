@@ -25,7 +25,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const SelectLanguage = () => {
   const [open, setOpen] = React.useState(false);
-  const [lang, setlang] = React.useState('en');
+  const [lang, setlang] = React.useState('fr');
   const languages = [
     {
       value: 'en',

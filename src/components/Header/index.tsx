@@ -9,15 +9,15 @@ import Logo from '../logo';
 const Header = () => {
   const navLinks = [
     {
-      name: 'About',
+      name: 'À propos',
       path: '/',
     },
     {
-      name: 'Help',
+      name: 'Aide',
       path: '/',
     },
     {
-      name: 'Contact Us',
+      name: 'Contactez-nous',
       path: '/',
     },
   ];

@@ -50,23 +50,34 @@ export function ComboboxDemo({
           role="combobox"
           aria-expanded={open}
           className={`${open ? `ring-1 ring-primaryGreen-500` : ``} ${
-            error && `border-redTheme ring-0`
-          }text-paragraph-medium font-medium -tracking--1% text-customBlack-500 w-full h-[44px] justify-between focus-visible:ring-1 focus-visible:ring-primaryGreen-500`}
+            error ? `border-redTheme ring-0` : ``
+          } ${
+            type === 'région' ? 'rounded-full w-[180px]' : 'w-full'
+          } text-paragraph-medium font-medium -tracking--1% text-customBlack-500 h-[44px] justify-between focus-visible:ring-1 focus-visible:ring-primaryGreen-500`}
         >
           {dropdownValue ? (
             dropdownData.find((data) => data?.name === dropdownValue)?.name
+          ) : type === 'région' ? (
+            <span className="text-customBlack-500">Toutes les régions</span>
           ) : (
-            <span className="text-customGrey-500">{`Select ${type}...`}</span>
+            <span className="text-customGrey-500">
+              {/* {`Sélectionner ${type}...`} */}
+            </span>
           )}
+
           {/* <ChevronsUpDown className="opacity-50" /> */}
           <ChevronDown />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="min-w-[398px] max-sm:w-full">
+      <PopoverContent
+        className={`${
+          type == 'région' ? 'w-[250px]' : 'min-w-[398px] max-sm:w-full'
+        }`}
+      >
         <Command>
-          <CommandInput placeholder={`Search ${type}...`} className="" />
+          <CommandInput placeholder={`Rechercher ${type}...`} className="" />
           <CommandList>
-            <CommandEmpty>No voting center found.</CommandEmpty>
+            <CommandEmpty>{`No ${type} found.`}</CommandEmpty>
             <CommandGroup>
               {dropdownData.map((data) => (
                 <CommandItem

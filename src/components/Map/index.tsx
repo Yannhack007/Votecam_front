@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 
@@ -6,22 +7,24 @@ import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
 import L from 'leaflet';
 import { GeoJsonObject } from 'geojson';
 import 'leaflet/dist/leaflet.css';
-import 'leaflet/dist/leaflet.css';
 import 'leaflet-boundary-canvas';
 import { Feature1 } from './geoJsonData1/map.interface';
 import { Feature2 } from './geoJsonData2/map.interface2';
 import { Feature3 } from './geoJsonData3/map.interface3';
-import { GeoJsonObject1 } from './geoJsonData1/map.interface';
-import { GeoJsonObject2 } from './geoJsonData2/map.interface2';
-import { GeoJsonObject3 } from './geoJsonData3/map.interface3';
-import geoJsonData1 from './geoJsonData1/gadmCMR.json';
-import geoJsonData2 from './geoJsonData2/gadm41_CMR_2.json';
-import geoJsonData3 from './geoJsonData3/gadm41_CMR_3.json';
 import { cameroonGeoJsonData1 } from './geoJsonData1/GeoJsonData1';
 import { cameroonGeoJsonData2 } from './geoJsonData2/GeoJsonData2';
 import { cameroonGeoJsonData3 } from './geoJsonData3/GeoJsonData3';
 import { MapComponentProps } from '@/types/mapComponentProps';
-
+import { ChevronsRight, CircleCheck } from 'lucide-react';
+import {
+  candidates,
+  generalVotingResults,
+  votingResultsByRegion,
+} from './electiondata';
+import { formatNumberWithCommas } from '@/helper/formatNumberWithCommas';
+import { generateLighterColor } from '@/helper/generateLighterColor';
+import TooltipElectionCard from '../ui/electionCard.tsx/tooltipElectionCard';
+import { getCandidateById } from '@/helper/manipulateElectionData';
 // Define the position and map style
 const position: [number, number] = [6.848, 11.502]; // Coordinates for Cameroon
 const mapStyle: React.CSSProperties = {
@@ -29,23 +32,6 @@ const mapStyle: React.CSSProperties = {
   height: '700px',
 };
 
-const politicalCandidates = [
-  {
-    candidateName: 'Joshua',
-    politicalParty: 'CPDM',
-    colorCode: '#ff0000',
-    candidatePhoto: '',
-  },
-];
-
-const electionVotes = {
-  Centre: {
-    CPDM: 50000,
-    percentage: 12000,
-  },
-};
-
-// Map component
 const Map: React.FC<MapComponentProps> = ({
   currentLevel,
   selectedRegion,
@@ -55,21 +41,67 @@ const Map: React.FC<MapComponentProps> = ({
   setCurrentLevel,
   currentGeoData,
   setCurrentGeoData,
+  handleFilterByDepartment,
+  handleBackToDepartments,
+  handleBackToRegions,
+  handleFilterByRegion,
 }) => {
   const mapRef = useRef<L.Map | null>(null);
   const [hoveredRegion, setHoveredRegion] = useState<string | null>(null);
   const [details, setDetails] = useState<string>('');
+  const [hoverInfo, setHoverInfo] = useState<{
+    region: string | '';
+    position: { x: number; y: number } | { x: 0; y: 0 };
+  }>({ region: '', position: { x: 0, y: 0 } });
 
-  const getStyle = () => {
-    switch (currentLevel) {
-      case 'regions':
-        return { color: 'blue', weight: 2 };
-      case 'departments':
-        return { color: 'green', weight: 2 };
-      case 'arrondissements':
-        return { color: 'red', weight: 2 };
-      default:
-        return { color: 'black', weight: 1 };
+  const defaultStyle = {
+    fillColor: '#gray',
+    weight: 1,
+    opacity: 1,
+    color: 'black', // Border color
+    fillOpacity: 1, // Adjust transparency of the fill color
+  };
+
+  const getStyle = (feature: Feature1 | Feature2 | Feature3) => {
+    if (!feature || !feature.properties) {
+      return defaultStyle;
+    }
+    let region: string | '';
+    let department: string | '';
+    let arrondissement: string | '';
+
+    // Determine the region or area name based on the current level and feature type
+    if (currentLevel === 'regions' && 'NAME_1' in feature.properties) {
+      region = feature.properties.NAME_1;
+      const resultsForRegion =
+        votingResultsByRegion.find((result) => result.region === region)
+          ?.voteData || [];
+
+      // Determine the color based on the top candidate in the region
+      const fillColor =
+        resultsForRegion.length > 0
+          ? getCandidateById(resultsForRegion[0].candidateId)?.colorCode ||
+            '#gray' // Default to gray if no colorCode
+          : '#gray'; // Default to gray if no results
+
+      return {
+        fillColor: fillColor,
+        weight: 1,
+        opacity: 1,
+        color: 'black', // Border color
+        //dashArray: '3',
+        fillOpacity: 1, // Adjust transparency of the fill color
+      };
+    } else if (
+      currentLevel === 'departments' &&
+      'NAME_2' in feature.properties
+    ) {
+      department = feature.properties.NAME_2;
+    } else if (
+      currentLevel === 'arrondissements' &&
+      'NAME_3' in feature.properties
+    ) {
+      arrondissement = feature.properties.NAME_3;
     }
   };
 
@@ -97,75 +129,8 @@ const Map: React.FC<MapComponentProps> = ({
     map.fitBounds(geoJsonLayer.getBounds());
   };
 
-  // Handle click to transition to departments
-  const handleRegionClick = (regionName: string) => {
-    console.log(regionName + ' clicked');
-    const filteredDepartments = {
-      ...cameroonGeoJsonData2,
-      features: cameroonGeoJsonData2.features.filter(
-        (feature) => feature.properties.NAME_1 === regionName
-      ),
-    };
-    console.log(
-      'region and their department: ' + regionName + '=' + filteredDepartments
-    );
-    setCurrentGeoData(filteredDepartments);
-    setCurrentLevel('departments');
-    setSelectedRegion(regionName);
-  };
-
-  // Handle click to transition to arrondissements
-  const handleDepartmentClick = (departmentName: string) => {
-    const filteredArrondissements = {
-      ...cameroonGeoJsonData3,
-      features: cameroonGeoJsonData3.features.filter(
-        (feature) => feature.properties.NAME_2 === departmentName
-      ),
-    };
-    console.log(
-      'department and their arrondissement:' +
-        departmentName +
-        '=' +
-        filteredArrondissements
-    );
-    setCurrentGeoData(filteredArrondissements);
-    setCurrentLevel('arrondissements');
-    setSelectedDepartment(departmentName);
-  };
-
-  //Navigate back to regions
-  const handleBackToRegions = () => {
-    setCurrentGeoData(cameroonGeoJsonData1);
-    setCurrentLevel('regions');
-    setSelectedRegion(null);
-    setSelectedDepartment(null);
-  };
-
-  // Navigate back to departments
-  const handleBackToDepartments = () => {
-    const filteredDepartments = {
-      ...cameroonGeoJsonData2,
-      features: cameroonGeoJsonData2.features.filter(
-        (feature) => feature.properties.NAME_1 === selectedRegion
-      ),
-    };
-    setCurrentGeoData(filteredDepartments);
-    setCurrentLevel('departments');
-    setSelectedDepartment(null);
-  };
-
-  useEffect(() => {
-    console.log(currentGeoData, 'currentGeoData');
-  }, [currentGeoData]);
-
-  const handleRegionHover = (e: L.LeafletEvent) => {
-    const regionName = e.target.feature.properties?.NAME_1 || 'Unknown region';
-    setHoveredRegion(regionName);
-  };
-
-  // Handle hover out event
-  const handleRegionOut = () => {
-    setHoveredRegion(null);
+  const handleMapCreated = (mapInstance: L.Map) => {
+    mapRef.current = mapInstance;
   };
 
   useEffect(() => {
@@ -177,19 +142,33 @@ const Map: React.FC<MapComponentProps> = ({
 
   return (
     <div>
-      <div>
+      <div className="">
         <h1>{details}</h1>
-        <div>
+        <div className="my-3">
           {currentLevel === 'departments' && (
-            <button onClick={handleBackToRegions}>Back to Regions</button>
+            <button
+              className="paragraph-medium-regular underline text-customBlack-500 hover:text-customBlack-300 transition"
+              onClick={handleBackToRegions}
+            >
+              {selectedRegion !== '' && 'Afficher toutes les régions'}
+            </button>
           )}
           {currentLevel === 'arrondissements' && (
-            <>
-              <button onClick={handleBackToDepartments}>
-                Back to Departments
+            <div className="flex items-center gap-1">
+              <button
+                className="paragraph-medium-regular underline text-customBlack-500 hover:text-customBlack-300 transition"
+                onClick={handleBackToRegions}
+              >
+                Afficher toutes les régions
               </button>
-              <button onClick={handleBackToRegions}>Back to Regions</button>
-            </>
+              <ChevronsRight />
+              <button
+                onClick={handleBackToDepartments}
+                className="paragraph-medium-regular underline text-customBlack-500 hover:text-customBlack-300 transition"
+              >
+                Retour au département
+              </button>
+            </div>
           )}
         </div>
 
@@ -198,6 +177,7 @@ const Map: React.FC<MapComponentProps> = ({
           zoom={6}
           style={mapStyle}
           ref={mapRef}
+         // whenCreated={handleMapCreated}
           //whenReady={setMap}
           // whenReady={onMapReady}
           // whenReady={(e) => onMapReady(e.target)}
@@ -211,13 +191,13 @@ const Map: React.FC<MapComponentProps> = ({
             onEachFeature={(feature, layer) => {
               if (currentLevel === 'regions') {
                 layer.on('click', () =>
-                  handleRegionClick(
+                  handleFilterByRegion(
                     (feature.properties as Feature1['properties']).NAME_1
                   )
                 );
               } else if (currentLevel === 'departments') {
                 layer.on('click', () =>
-                  handleDepartmentClick(
+                  handleFilterByDepartment(
                     (feature.properties as Feature2['properties']).NAME_2
                   )
                 );
@@ -228,16 +208,38 @@ const Map: React.FC<MapComponentProps> = ({
                   }</b>`
                 );
               }
+
+              layer.on({
+                mouseover: (e) => {
+                  const regionName = feature.properties.NAME_1;
+                  // Get the mouse position
+                  const { x, y } = e.originalEvent;
+                  setHoverInfo({
+                    region: regionName,
+                    position: { x, y },
+                  });
+                },
+                mousemove: (e) => {
+                  const { x, y } = e.originalEvent;
+                  setHoverInfo((prev) => ({
+                    ...prev,
+                    position: { x, y },
+                  }));
+                },
+                mouseout: () => {
+                  setHoverInfo({ region: '', position: { x: 0, y: 0 } });
+                },
+              });
             }}
           />
         </MapContainer>
       </div>
 
-      {/* Hovered region details */}
-      {hoveredRegion && (
-        <div className="bg-black text-white w-full h-full w- text-center">
-          <p>{`Hovered over: ${hoveredRegion}`}</p>
-        </div>
+      {hoverInfo.position && hoverInfo.region && (
+        <TooltipElectionCard
+          hoverInfo={hoverInfo}
+          setHoverInfo={setHoverInfo}
+        />
       )}
     </div>
   );
