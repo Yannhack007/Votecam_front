@@ -1,9 +1,9 @@
 import React from 'react'
 
-const CentresDeVote = () => {
+const VotingCentres = () => {
   return (
-    <div>CentresDeVote</div>
+    <div>VotingCentres</div>
   )
 }
 
-export default CentresDeVote
+export default VotingCentres
