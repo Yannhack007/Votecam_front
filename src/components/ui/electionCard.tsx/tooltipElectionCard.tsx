@@ -17,7 +17,7 @@ import {
 
 interface HoverInfo {
   region: string | '';
-  position: { x: number; y: number } | { x: 0; y: 0 };
+  position: { top: number; left: number } | { top: 0; left: 0 };
 }
 
 interface TooltipProps {
@@ -33,8 +33,8 @@ const TooltipElectionCard: React.FC<TooltipProps> = ({
     <div
       style={{
         position: 'absolute',
-        top: hoverInfo?.position.y + 10,
-        left: hoverInfo?.position.x + 10,
+        top: hoverInfo?.position.top,
+        left: hoverInfo?.position.left,
         backgroundColor: 'white',
         borderRadius: '8px',
         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',

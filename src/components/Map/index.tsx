@@ -1,4 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable prefer-const */
+
 /* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 
@@ -51,8 +52,8 @@ const Map: React.FC<MapComponentProps> = ({
   const [details, setDetails] = useState<string>('');
   const [hoverInfo, setHoverInfo] = useState<{
     region: string | '';
-    position: { x: number; y: number } | { x: 0; y: 0 };
-  }>({ region: '', position: { x: 0, y: 0 } });
+    position: { top: number; left: number } | { top: 0; left: 0 };
+  }>({ region: '', position: { top: 0, left: 0 } });
 
   const defaultStyle = {
     fillColor: '#gray',
@@ -131,6 +132,29 @@ const Map: React.FC<MapComponentProps> = ({
 
   const handleMapCreated = (mapInstance: L.Map) => {
     mapRef.current = mapInstance;
+  };
+
+  const getTooltipPosition = (mouseX:number, mouseY:number, mapWidth:number, mapHeight:number) => {
+    // Define boundaries
+    console.log(mapWidth + 'mapwidth' , mapHeight + 'mapheight')
+    const buffer = 30; // Distance from edges to adjust the tooltip
+
+    // Determine the position based on mouseX and mouseY relative to map bounds
+    let position = { top: mouseY, left: mouseX };
+
+    if (mouseX < buffer) {
+      position.left = 0; // Tooltip will be to the right
+    } else if (mouseX > mapWidth - buffer) {
+      position.left = mouseX + 20; // Tooltip will be to the left
+    }
+
+    if (mouseY < buffer) {
+      position.top = 0; // Tooltip will be below
+    } else if (mouseY > mapHeight - buffer) {
+      position.top = mapHeight - 230; // Tooltip will be above
+    }
+
+    return position;
   };
 
   useEffect(() => {
@@ -214,20 +238,38 @@ const Map: React.FC<MapComponentProps> = ({
                   const regionName = feature.properties.NAME_1;
                   // Get the mouse position
                   const { x, y } = e.originalEvent;
+                  const mapWidth = e.target._map.getSize().x;
+                  const mapHeight = e.target._map.getSize().y;
+
+                  const position = getTooltipPosition(
+                    x,
+                    y,
+                    mapWidth,
+                    mapHeight
+                  );
                   setHoverInfo({
                     region: regionName,
-                    position: { x, y },
+                    position: position,
                   });
                 },
                 mousemove: (e) => {
                   const { x, y } = e.originalEvent;
+                  const mapWidth = e.target._map.getSize().x;
+                  const mapHeight = e.target._map.getSize().y;
+
+                  const position = getTooltipPosition(
+                    x,
+                    y,
+                    mapWidth,
+                    mapHeight
+                  );
                   setHoverInfo((prev) => ({
                     ...prev,
-                    position: { x, y },
+                    position: position,
                   }));
                 },
                 mouseout: () => {
-                  setHoverInfo({ region: '', position: { x: 0, y: 0 } });
+                  setHoverInfo({ region: '', position: { top: 0, left: 0 } });
                 },
               });
             }}

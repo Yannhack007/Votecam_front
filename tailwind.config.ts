@@ -25,6 +25,7 @@ export default {
   			},
   			customGrey: {
   				'100': 'var(--grey-100)',
+				'200': 'var(--grey-200)',
   				'300': 'var(--grey-300)',
   				'400': 'var(--grey-400)',
   				'500': 'var(--grey-500)'

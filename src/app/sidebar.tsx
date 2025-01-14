@@ -21,9 +21,15 @@ import {
   CollapsibleTrigger,
 } from '@/components/ui/collapsible';
 import { ChevronDown } from 'lucide-react';
-import NotFoundPage from './not-found';
+
 export const AppSidebar = ({ role }: { role: string }) => {
   const pathname = usePathname();
+  const ColoredIcon = ({ Icon, color }: { Icon: React.FC; color: string }) => (
+    <span style={{ color }}>
+      <Icon />
+    </span>
+  );
+
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader>
@@ -44,71 +50,65 @@ export const AppSidebar = ({ role }: { role: string }) => {
           <SidebarGroupLabel>Platform</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {sideBarData({ role }).filter((item) => item.role.includes(role))
-                .length === 0 ? (
-                // Show Not Found page or return null if no valid items exist
-                <NotFoundPage />
-              ) : (
-                sideBarData({ role }).map((item, index) => {
-                  if (item.role.includes(role)) {
-                    return (
-                      <Collapsible
-                        key={index}
-                        defaultOpen={false}
-                        className="group/collapsible"
-                      >
-                        <SidebarMenuItem>
-                          {item.subnav.length > 0 ? (
-                            <>
-                              <CollapsibleTrigger asChild>
-                                <SidebarMenuButton
-                                  isActive={pathname === item.url}
-                                >
-                                  <item.icon color={'#00B88C'} />
-                                  <span className="flex justify-between w-full items-center">
-                                    {item.title}
-                                    <ChevronDown
-                                      size={20}
-                                      color="hsl(var(--sidebar-foreground))"
-                                    />
-                                  </span>
-                                </SidebarMenuButton>
-                              </CollapsibleTrigger>
-                              <CollapsibleContent>
-                                <SidebarMenuSub>
-                                  {item.subnav.map((subItem, subIndex) => (
-                                    <SidebarMenuSubItem key={subIndex}>
-                                      <SidebarMenuButton
-                                        asChild
-                                        isActive={pathname === subItem.url}
-                                      >
-                                        <a href={subItem.url}>
-                                          <span>{subItem.title}</span>
-                                        </a>
-                                      </SidebarMenuButton>
-                                    </SidebarMenuSubItem>
-                                  ))}
-                                </SidebarMenuSub>
-                              </CollapsibleContent>
-                            </>
-                          ) : (
-                            <SidebarMenuButton
-                              asChild
-                              isActive={pathname === item.url}
-                            >
-                              <a href={item.url}>
-                                <item.icon color={'#00B88C'} />
-                                <span>{item.title}</span>
-                              </a>
-                            </SidebarMenuButton>
-                          )}
-                        </SidebarMenuItem>
-                      </Collapsible>
-                    );
-                  }
-                  return null; // Ensures map returns nothing for invalid roles
-                })
-              )}
+              {sideBarData({ role }).map((item, index) => {
+                if (item.role.includes(role.toLowerCase())) {
+                  return (
+                    <Collapsible
+                      key={index}
+                      defaultOpen={false}
+                      className="group/collapsible"
+                    >
+                      <SidebarMenuItem>
+                        {item.subnav.length > 0 ? (
+                          <>
+                            <CollapsibleTrigger asChild>
+                              <SidebarMenuButton
+                                isActive={pathname === item.url}
+                              >
+                                <ColoredIcon Icon={item.icon} color="#00B88C" />
+                                <span className="flex justify-between w-full items-center">
+                                  {item.title}
+                                  <ChevronDown
+                                    size={20}
+                                    color="hsl(var(--sidebar-foreground))"
+                                  />
+                                </span>
+                              </SidebarMenuButton>
+                            </CollapsibleTrigger>
+                            <CollapsibleContent>
+                              <SidebarMenuSub>
+                                {item.subnav.map((subItem, subIndex) => (
+                                  <SidebarMenuSubItem key={subIndex}>
+                                    <SidebarMenuButton
+                                      asChild
+                                      isActive={pathname === subItem.url}
+                                    >
+                                      <a href={subItem.url}>
+                                        <span>{subItem.title}</span>
+                                      </a>
+                                    </SidebarMenuButton>
+                                  </SidebarMenuSubItem>
+                                ))}
+                              </SidebarMenuSub>
+                            </CollapsibleContent>
+                          </>
+                        ) : (
+                          <SidebarMenuButton
+                            asChild
+                            isActive={pathname === item.url}
+                          >
+                            <a href={item.url}>
+                              <ColoredIcon Icon={item.icon} color="#00B88C" />
+                              <span>{item.title}</span>
+                            </a>
+                          </SidebarMenuButton>
+                        )}
+                      </SidebarMenuItem>
+                    </Collapsible>
+                  );
+                }
+                return null; // Ensures map returns nothing for invalid roles
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

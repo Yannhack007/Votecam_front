@@ -44,7 +44,7 @@ export const sideBarData = ({ role }: { role: string }): SideBarData[] => {
       subnav: [],
     },
     {
-      title: 'Entrée des votes',
+      title: 'Enregistrer les Votes',
       url: `/u/${officeadmin}/recordvotes`,
       role: [officeadmin],
       icon: SquareCheckBig,

@@ -5,7 +5,7 @@ import React from 'react';
 const Dashboard = () => {
   return (
     <div className="w-full flex flex-col"> 
-      <p>Dashboard</p>
+      
     </div>
   );
 };
