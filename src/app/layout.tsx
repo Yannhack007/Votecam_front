@@ -4,6 +4,7 @@ import { Geist, Geist_Mono, Inter, Poppins } from 'next/font/google';
 import './globals.css';
 import localFont from 'next/font/local';
 import { url } from 'inspector';
+import { Toaster } from '@/components/ui/sonner';
 
 
 const poppins = Poppins({
@@ -51,10 +52,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${poppins.variable} antialiased`}
-      >
-        {children}
+      <body className={`${inter.variable} ${poppins.variable} antialiased`}>
+        <main>{children}</main>
+        <Toaster/>
       </body>
     </html>
   );

@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
 import L from 'leaflet';
 import { GeoJsonObject } from 'geojson';
@@ -22,6 +22,7 @@ import {
   generalVotingResults,
   votingResultsByRegion,
 } from './electiondata';
+import { LatLng, Layer } from 'leaflet';
 import { formatNumberWithCommas } from '@/helper/formatNumberWithCommas';
 import { generateLighterColor } from '@/helper/generateLighterColor';
 import TooltipElectionCard from '../ui/electionCard.tsx/tooltipElectionCard';
@@ -133,6 +134,50 @@ const Map: React.FC<MapComponentProps> = ({
   const handleMapCreated = (mapInstance: L.Map) => {
     mapRef.current = mapInstance;
   };
+ const onEachFeature = useCallback(
+   (feature: Feature1 | Feature2 | Feature3, layer : Layer) => {
+     if (currentLevel === 'regions') {
+       layer.on('click', () => handleFilterByRegion(feature.properties.NAME_1));
+     } else if (currentLevel === 'departments') {
+       layer.on('click', () =>
+         handleFilterByDepartment(feature.properties.NAME_2)
+       );
+     } else if (currentLevel === 'arrondissements') {
+       layer.bindPopup(`<b>${feature.properties.NAME_3}</b>`);
+     }
+
+     // Event handling for mouse interactions
+     layer.on({
+       mouseover: (e) => {
+         const regionName = feature.properties.NAME_1;
+         const { x, y } = e.originalEvent;
+         const mapWidth = e.target._map.getSize().x;
+         const mapHeight = e.target._map.getSize().y;
+
+         const position = getTooltipPosition(x, y, mapWidth, mapHeight);
+         setHoverInfo({
+           region: regionName,
+           position: position,
+         });
+       },
+       mousemove: (e) => {
+         const { x, y } = e.originalEvent;
+         const mapWidth = e.target._map.getSize().x;
+         const mapHeight = e.target._map.getSize().y;
+
+         const position = getTooltipPosition(x, y, mapWidth, mapHeight);
+         setHoverInfo((prev) => ({
+           ...prev,
+           position: position,
+         }));
+       },
+       mouseout: () => {
+         setHoverInfo({ region: '', position: { top: 0, left: 0 } });
+       },
+     });
+   },
+   [currentLevel, handleFilterByRegion, handleFilterByDepartment, setHoverInfo]
+ );
 
   const getTooltipPosition = (mouseX:number, mouseY:number, mapWidth:number, mapHeight:number) => {
     // Define boundaries
@@ -212,67 +257,68 @@ const Map: React.FC<MapComponentProps> = ({
             key={JSON.stringify(currentGeoData)} // Ensure a new instance is created on data change
             data={currentGeoData}
             style={getStyle}
-            onEachFeature={(feature, layer) => {
-              if (currentLevel === 'regions') {
-                layer.on('click', () =>
-                  handleFilterByRegion(
-                    (feature.properties as Feature1['properties']).NAME_1
-                  )
-                );
-              } else if (currentLevel === 'departments') {
-                layer.on('click', () =>
-                  handleFilterByDepartment(
-                    (feature.properties as Feature2['properties']).NAME_2
-                  )
-                );
-              } else if (currentLevel === 'arrondissements') {
-                layer.bindPopup(
-                  `<b>${
-                    (feature.properties as Feature3['properties']).NAME_3
-                  }</b>`
-                );
-              }
+            // onEachFeature={(feature, layer) => {
+            //   if (currentLevel === 'regions') {
+            //     layer.on('click', () =>
+            //       handleFilterByRegion(
+            //         (feature.properties as Feature1['properties']).NAME_1
+            //       )
+            //     );
+            //   } else if (currentLevel === 'departments') {
+            //     layer.on('click', () =>
+            //       handleFilterByDepartment(
+            //         (feature.properties as Feature2['properties']).NAME_2
+            //       )
+            //     );
+            //   } else if (currentLevel === 'arrondissements') {
+            //     layer.bindPopup(
+            //       `<b>${
+            //         (feature.properties as Feature3['properties']).NAME_3
+            //       }</b>`
+            //     );
+            //   }
 
-              layer.on({
-                mouseover: (e) => {
-                  const regionName = feature.properties.NAME_1;
-                  // Get the mouse position
-                  const { x, y } = e.originalEvent;
-                  const mapWidth = e.target._map.getSize().x;
-                  const mapHeight = e.target._map.getSize().y;
+            //   layer.on({
+            //     mouseover: (e) => {
+            //       const regionName = feature.properties.NAME_1;
+            //       // Get the mouse position
+            //       const { x, y } = e.originalEvent;
+            //       const mapWidth = e.target._map.getSize().x;
+            //       const mapHeight = e.target._map.getSize().y;
 
-                  const position = getTooltipPosition(
-                    x,
-                    y,
-                    mapWidth,
-                    mapHeight
-                  );
-                  setHoverInfo({
-                    region: regionName,
-                    position: position,
-                  });
-                },
-                mousemove: (e) => {
-                  const { x, y } = e.originalEvent;
-                  const mapWidth = e.target._map.getSize().x;
-                  const mapHeight = e.target._map.getSize().y;
+            //       const position = getTooltipPosition(
+            //         x,
+            //         y,
+            //         mapWidth,
+            //         mapHeight
+            //       );
+            //       setHoverInfo({
+            //         region: regionName,
+            //         position: position,
+            //       });
+            //     },
+            //     mousemove: (e) => {
+            //       const { x, y } = e.originalEvent;
+            //       const mapWidth = e.target._map.getSize().x;
+            //       const mapHeight = e.target._map.getSize().y;
 
-                  const position = getTooltipPosition(
-                    x,
-                    y,
-                    mapWidth,
-                    mapHeight
-                  );
-                  setHoverInfo((prev) => ({
-                    ...prev,
-                    position: position,
-                  }));
-                },
-                mouseout: () => {
-                  setHoverInfo({ region: '', position: { top: 0, left: 0 } });
-                },
-              });
-            }}
+            //       const position = getTooltipPosition(
+            //         x,
+            //         y,
+            //         mapWidth,
+            //         mapHeight
+            //       );
+            //       setHoverInfo((prev) => ({
+            //         ...prev,
+            //         position: position,
+            //       }));
+            //     },
+            //     mouseout: () => {
+            //       setHoverInfo({ region: '', position: { top: 0, left: 0 } });
+            //     },
+            //   });
+            // }}
+            onEachFeature={onEachFeature}
           />
         </MapContainer>
       </div>

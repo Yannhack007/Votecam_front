@@ -1,4 +1,3 @@
-
 'use client';
 
 import * as React from 'react';
@@ -22,7 +21,7 @@ import {
 
 interface DropDownData {
   name: string;
-  id: string;
+  id: string | number;
 }
 
 interface ComboBoxProps {
@@ -53,7 +52,7 @@ export function ComboboxDemo({
             error ? `border-redTheme ring-0` : ``
           } ${
             type === 'région' ? 'rounded-full w-[180px]' : 'w-full'
-          } text-paragraph-medium font-medium -tracking--1% text-customBlack-500 h-[44px] justify-between focus-visible:ring-1 focus-visible:ring-primaryGreen-500`}
+          } text-paragraph-medium font-medium -tracking--1% text-customBlack-500 h-[40px] justify-between focus-visible:ring-1 focus-visible:ring-primaryGreen-500`}
         >
           {dropdownValue ? (
             dropdownData.find((data) => data?.name === dropdownValue)?.name
@@ -71,8 +70,13 @@ export function ComboboxDemo({
       </PopoverTrigger>
       <PopoverContent
         className={`${
-          type == 'région' ? 'w-[250px]' : 'min-w-[398px] max-sm:w-full'
-        }`}
+          type == 'région'
+            ? 'w-[250px]'
+            : type === ''
+            ? 'w-[400px]'
+            : 'min-w-[398px] max-sm:w-full'
+        }
+        `}
       >
         <Command>
           <CommandInput placeholder={`Rechercher ${type}...`} className="" />

@@ -176,7 +176,7 @@ const RecordVotes = () => {
           <p className="black paragraph-medium-medium">
             Télécharger le procès-verbal des résultats
           </p>
-          <div className="w-full h-[300px] bg-[rgba(230,248,244,0.5)] rounded-md border-dashed border-2 border-customGrey-300 flex items-center flex-col justify-center gap-6">
+          <div className="w-full h-[300px] bg-[rgba(230,248,244,0.3)] rounded-md border-dashed border-2 border-customGrey-300 flex items-center flex-col justify-center gap-6">
             <Image
               src="/upload.svg"
               alt="cloud upload"

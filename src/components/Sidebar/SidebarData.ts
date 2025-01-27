@@ -8,6 +8,7 @@ import {
   CalendarClock,
   SquareCheckBig,
   Send,
+  CloudUpload
 } from 'lucide-react';
 import { centeradmin, officeadmin, superadmin } from '@/constants/roles';
 
@@ -95,6 +96,13 @@ export const sideBarData = ({ role }: { role: string }): SideBarData[] => {
           url: `/u/${superadmin}/usermanagement/officeadmin`,
         },
       ],
+    },
+    {
+      title: 'Listes électorales',
+      url: `/u/${superadmin}/electorallists`,
+      role: [superadmin],
+      icon: CloudUpload,
+      subnav: [],
     },
   ];
 };

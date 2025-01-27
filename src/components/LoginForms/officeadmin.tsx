@@ -126,16 +126,17 @@ const OfficeAdminLogin = () => {
               <label htmlFor="department" className="form-label">
                 Centre de vote
               </label>
+
               <ComboboxDemo
-                dropdownData={departments_data}
-                setDropdownValue={setSelectedCenter}
-                dropdownValue={selectedCenter}
-                error={error.votingCenter}
-                type="centre de vote"
+                dropdownData={votingOfficeData}
+                setDropdownValue={setSelectedOffice}
+                dropdownValue={selectedOffice}
+                error={error.votingOffice}
+                type="arrondissement"
               />
               {error.votingCenter && (
                 <p className="text-redTheme paragraph-medium2-medium">
-                  {error.votingCenter}
+                  {error.votingOffice}
                 </p>
               )}
             </div>

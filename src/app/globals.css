@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-*, ::before, ::after {
-    box-sizing: border-box;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -136,6 +136,22 @@ body {
 .leaflet-container {
   background: #f2f2f2 !important;
 }
+
+.custom-input {
+  border: 1px solid hsl(0, 0%, 89.8%);
+  padding: 4px 6px;
+  height: 40px;
+  border-radius: 6px;
+  width: 100%; 
+  font-size: 15px;
+  color: var(--black-500)
+
+}
+
+.custom-input:focus {
+  outline: 1px solid var(--primary-green-500);
+}
+
 /* .\[\&\>svg\]\:size-4 > svg {
     width: 1.25rem !important;
     height: 1.25rem !important;

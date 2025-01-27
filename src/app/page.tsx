@@ -8,6 +8,7 @@ import { GeoJsonObject } from 'geojson';
 import { cameroonGeoJsonData1 } from '@/components/Map/geoJsonData1/GeoJsonData1';
 import { cameroonGeoJsonData2 } from '@/components/Map/geoJsonData2/GeoJsonData2';
 import { cameroonGeoJsonData3 } from '@/components/Map/geoJsonData3/GeoJsonData3';
+import KeyraceCard from '@/components/ui/electionCard.tsx/KeyraceCard';
 export default function Home() {
   const [currentLevel, setCurrentLevel] = useState<
     'regions' | 'departments' | 'arrondissements'
@@ -79,7 +80,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="w-full flex flex-col gap-12 h-full main-layout-body text-customBlack-500">
+      <main className="mb-8 w-full flex flex-col gap-12 h-full main-layout-body text-customBlack-500">
         <h4 className="h4-custom-bold text-center ">
           Cameroun 2025 : Résultats de L&apos;Élection Présidentielle en Direct
           {/* Cameroon 2025: Live Presidential Election Results */}
@@ -113,6 +114,13 @@ export default function Home() {
             handleBackToRegions={handleBackToRegions}
             handleFilterByRegion={handleFilterByRegion}
           />
+        </section>
+
+        <section className="flex flex-col gap-8 mt-12">
+          <p className="black h5-custom-medium font-semibold ">
+            Les élections présidentielles clés
+          </p>
+          <KeyraceCard />
         </section>
       </main>
     </>

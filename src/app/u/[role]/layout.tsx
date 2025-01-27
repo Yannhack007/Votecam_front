@@ -4,7 +4,7 @@ import { AppSidebar } from '@/app/sidebar';
 import AdminsHeader from '@/components/Admins/Header';
 import Header from '@/components/Header';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { sideBarData } from '@/components/Sidebar/SidebarData';
 import NotFoundPage from '@/app/not-found';
 import { usePathname } from 'next/navigation';
@@ -16,9 +16,18 @@ const RoleLayout = ({
   children: React.ReactNode;
   params: Promise<{ role: string }>;
 }) => {
-  const { role } = React.use(params);
+  const [role, setRole] = useState<string>('');
+   useEffect(() => {
+     const fetchRole = async () => {
+       const resolvedParams = await params;
+       setRole(resolvedParams.role);
+     };
+     fetchRole();
+   }, [params]);
   const pathname = usePathname();
 
+  if (!role) return null; 
+  
   //function to check roles before rendering sidebar
   const isValidPathForRole = (role: string, pathname: string) => {
     return sideBarData({ role }).some((item) => {

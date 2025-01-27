@@ -7,10 +7,16 @@ import departments_data from '@/components/Map/departments_data.json';
 import React, { useState, useEffect } from 'react';
 import { Input } from '@/components/ui/input';
 import { Eye, EyeOff } from 'lucide-react';
-
+import CameroonData from '@/components/Map/cameroon_data.json';
 interface Errors {
   votingCenter: string;
+  votingOffice: '';
   password: string;
+}
+
+interface Arrondissement {
+  name: string;
+  id: string;
 }
 const CenterAdminLogin = () => {
   const [selectedCenter, setSelectedCenter] = useState<string>('');
@@ -18,12 +24,22 @@ const CenterAdminLogin = () => {
   const [passwordIsVisible, setPasswordIsVisible] = useState(false);
   const [error, setError] = useState<Errors>({
     votingCenter: '',
+    votingOffice: '',
     password: '',
   });
+  const [selectedOffice, setSelectedOffice] = useState<string>('');
+  const [votingOfficeData, setVotingOfficeData] = useState<Arrondissement[]>([
+    {
+      id: '',
+      name: '',
+    },
+  ]);
   const handlePasswordVisibility = () => {
     setPasswordIsVisible(!passwordIsVisible);
   };
   const [formData, setFormData] = useState({
+    votingCenter: '',
+    votingOffice: '',
     password: '',
   });
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,28 +50,60 @@ const CenterAdminLogin = () => {
     }));
   };
 
+  const handleFilterArrondissementsByDepartment = (selectedCenter: string) => {
+    const selectedRegion = CameroonData.find((region) =>
+      region.departments.some(
+        (department) => department.departmentName === selectedCenter
+      )
+    );
+
+    const selectedDepartment = selectedRegion?.departments.find(
+      (department) => department.departmentName === selectedCenter
+    );
+
+    const arrondissements =
+      selectedDepartment?.arrondissements.map((arr) => ({
+        name: arr.name,
+        id: arr.arrondissementId,
+      })) || [];
+
+    setVotingOfficeData(arrondissements);
+  };
+  useEffect(() => {
+    handleFilterArrondissementsByDepartment(selectedCenter);
+  }, [selectedCenter]);
+
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     const formDataToSend = {
+      votingOffice: selectedOffice,
       votingCentre: selectedCenter,
       password: formData.password,
     };
     console.log(formDataToSend);
-    const newError: Errors = { password: '', votingCenter: '' };
+    const newError: Errors = {
+      password: '',
+      votingCenter: '',
+      votingOffice: '',
+    };
 
     if (formDataToSend.password === '') {
       newError.password = 'Le mot de passe ne peut être vide';
     }
 
     if (formDataToSend.votingCentre === '') {
-      newError.votingCenter = 'Le centre de vote ne peut être vide';
+      newError.votingCenter = 'Le departement ne peut être vide';
+    }
+
+    if (formDataToSend.votingOffice === '') {
+      newError.votingCenter = 'Larrondissement ne peut être vide';
     }
 
     // Only update state if there are errors
     if (newError.password || newError.votingCenter) {
       setError(newError);
     } else {
-      setError({ password: '', votingCenter: '' });
+      setError({ password: '', votingCenter: '', votingOffice: '' });
     }
   };
 
@@ -71,20 +119,61 @@ const CenterAdminLogin = () => {
             Connexion
           </h4>
           <div className="flex flex-col gap-8">
+            {/* department */}
             <div className="w-full h-full flex flex-col gap-2">
               <label htmlFor="department" className="form-label">
-                Centre de vote
+                Département
               </label>
               <ComboboxDemo
                 dropdownData={departments_data}
                 setDropdownValue={setSelectedCenter}
                 dropdownValue={selectedCenter}
                 error={error.votingCenter}
-                type="centre de votre"
+                type="département"
               />
               {error.votingCenter && (
                 <p className="text-redTheme paragraph-medium2-medium">
                   {error.votingCenter}
+                </p>
+              )}
+            </div>
+
+            {/* arrondissement */}
+            {/* <div className="w-full h-full flex flex-col gap-2">
+              <label htmlFor="department" className="form-label">
+                Arrondissement
+              </label>
+
+              <ComboboxDemo
+                dropdownData={votingOfficeData}
+                setDropdownValue={setSelectedOffice}
+                dropdownValue={selectedOffice}
+                error={error.votingOffice}
+                type="arrondissement"
+              />
+              {error.votingCenter && (
+                <p className="text-redTheme paragraph-medium2-medium">
+                  {error.votingOffice}
+                </p>
+              )}
+            </div> */}
+
+            {/* Voting centre */}
+            <div className="w-full h-full flex flex-col gap-2">
+              <label htmlFor="department" className="form-label">
+                Centre de vote
+              </label>
+
+              <ComboboxDemo
+                dropdownData={votingOfficeData}
+                setDropdownValue={setSelectedOffice}
+                dropdownValue={selectedOffice}
+                error={error.votingOffice}
+                type="arrondissement"
+              />
+              {error.votingCenter && (
+                <p className="text-redTheme paragraph-medium2-medium">
+                  {error.votingOffice}
                 </p>
               )}
             </div>
