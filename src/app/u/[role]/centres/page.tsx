@@ -143,7 +143,7 @@ const VotingCentres = () => {
   };
 
   return (
-    <div className="flex flex-col mt-4">
+    <div className="flex flex-col mt-4 w-[70%]">
       <div className="flex flex-col gap-2">
         <p className="black h5-custom-medium ">Centres de vote</p>
         <p className="paragraph-medium-regular black">
@@ -245,7 +245,7 @@ const VotingCentres = () => {
         </div>
       ) : (
         <div className="flex flex-col gap4">
-          <div className="w-full flex items-center justify-center">
+          <div className="w-full flex items-center justify-end">
             <Dialog>
               <DialogTrigger className="mt-8" asChild>
                 <Button className="w-[220px]">
@@ -309,7 +309,7 @@ const VotingCentres = () => {
                     />
                   </div>
                 </form>
-                <DialogFooter className="justify-end">
+                <DialogFooter className="w-full justify-end">
                   <DialogClose className="mt-4" asChild>
                     <Button
                       onClick={handleSubmit}
@@ -323,7 +323,8 @@ const VotingCentres = () => {
               </DialogContent>
             </Dialog>
           </div>
-          <div className="w-[60%] mt-10">
+
+          <div className="w-full mt-10">
             <table className="w-full">
               <thead className="w-full">
                 <tr className="bg-[#f0f0f0] w-full  rounded-md">

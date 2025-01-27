@@ -46,72 +46,72 @@ const VotingCampaign = () => {
     console.log(form.startDate[0]);
   }, [form]);
 
-  const handleSaveCampaign = async () => {
-    const data = {
-      name: form?.name,
-      start: form?.startDate[0].toString(), // Correct date format (without the 'Z')
-      end: form?.endDate[0].toString(),
-      state: form?.status,
-    };
-    console.log(data, 'data');
-    setIsLoading(true);
-    try {
-      const res = await fetch(`${BASE_URL}/campagnes`, {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      if (!res.ok) {
-        throw new Error(`Error: ${res.status}`);
-      }
+  // const handleSaveCampaign = async () => {
+  //   const data = {
+  //     name: form?.name,
+  //     start: form?.startDate[0].toString(), // Correct date format (without the 'Z')
+  //     end: form?.endDate[0].toString(),
+  //     state: form?.status,
+  //   };
+  //   console.log(data, 'data');
+  //   setIsLoading(true);
+  //   try {
+  //     const res = await fetch(`${BASE_URL}/campagnes`, {
+  //       method: 'POST',
+  //       body: JSON.stringify(data),
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //     });
+  //     if (!res.ok) {
+  //       throw new Error(`Error: ${res.status}`);
+  //     }
 
-      const result = await res.json();
+  //     const result = await res.json();
 
-      console.log(result);
-      window.location.reload();
-    } catch (err) {
-      setIsLoading(false);
-      console.log(err);
-      //throw new error(err)
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  //     console.log(result);
+  //     window.location.reload();
+  //   } catch (err) {
+  //     setIsLoading(false);
+  //     console.log(err);
+  //     //throw new error(err)
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
 
-  const handleGetAllCompaigns = async () => {
-    setIsLoading(true);
-    try {
-      const res = await fetch(`${BASE_URL}/campagnes`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      if (!res.ok) {
-        throw new Error(`Error: ${res.status}`);
-      }
+  // const handleGetAllCompaigns = async () => {
+  //   setIsLoading(true);
+  //   try {
+  //     const res = await fetch(`${BASE_URL}/campagnes`, {
+  //       method: 'GET',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //     });
+  //     if (!res.ok) {
+  //       throw new Error(`Error: ${res.status}`);
+  //     }
 
-      const result = await res.json();
-      if (Array.isArray(result) && result.length === 0) {
-        setIsEmpty(true);
-      } else {
-        setIsEmpty(false);
-      }
-      setCampagneData(result);
-      //console.log(result);
-    } catch (err) {
-      setIsLoading(false);
-      console.log(err);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  //     const result = await res.json();
+  //     if (Array.isArray(result) && result.length === 0) {
+  //       setIsEmpty(true);
+  //     } else {
+  //       setIsEmpty(false);
+  //     }
+  //     setCampagneData(result);
+  //     //console.log(result);
+  //   } catch (err) {
+  //     setIsLoading(false);
+  //     console.log(err);
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    handleGetAllCompaigns();
-  }, []);
+  // useEffect(() => {
+  //   handleGetAllCompaigns();
+  // }, []);
   return (
     <div className="flex flex-col mt-4">
       <div className="flex flex-col gap-2">
@@ -190,8 +190,8 @@ const VotingCampaign = () => {
                         handleOnChange(e.target.name, e.target.value)
                       }
                     >
-                      <option value="enable">Enable</option>
-                      <option value="disable">Disable</option>
+                      <option value="enable">Activer</option>
+                      <option value="disable">Désactiver</option>
                     </select>
                   </div>
                 </form>
@@ -199,7 +199,7 @@ const VotingCampaign = () => {
                   <DialogClose className="mt-4" asChild>
                     <Button
                       type="button"
-                      onClick={handleSaveCampaign}
+                      //onClick={handleSaveCampaign}
                       variant="default"
                     >
                       {isLoading && <Loader />}
@@ -286,7 +286,7 @@ const VotingCampaign = () => {
                   <DialogClose className="mt-4" asChild>
                     <Button
                       type="button"
-                      onClick={handleSaveCampaign}
+                      //onClick={handleSaveCampaign}
                       variant="default"
                     >
                       {isLoading && <Loader />}

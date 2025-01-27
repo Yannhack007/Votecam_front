@@ -60,7 +60,6 @@ const VotingOffices = () => {
     { id: 10, name: 'Centre X' },
   ];
 
-
   const handleSubmit = () => {
     const data = {
       id: offices.length + 1,
@@ -72,7 +71,7 @@ const VotingOffices = () => {
   };
 
   return (
-    <div className="flex flex-col mt-4">
+    <div className="flex flex-col mt-4 w-[70%]">
       <div className="flex flex-col gap-2">
         <p className="black h5-custom-medium ">Bureaux de vote</p>
         <p className="paragraph-medium-regular black">
@@ -158,7 +157,7 @@ const VotingOffices = () => {
       ) : (
         <div className="flex flex-col gap4">
           {/* dialog */}
-          <div className="w-full flex items-center justify-center">
+          <div className="w-full flex items-center justify-end">
             <Dialog>
               <DialogTrigger className="mt-8" asChild>
                 <Button className="w-[220px]">
@@ -220,7 +219,7 @@ const VotingOffices = () => {
             </Dialog>
           </div>
 
-          <div className="w-[60%] mt-10">
+          <div className="w-full mt-10">
             <table className="w-full">
               <thead className="w-full">
                 <tr className="bg-[#f0f0f0] w-full  rounded-md">
@@ -253,6 +252,7 @@ const VotingOffices = () => {
           </div>
         </div>
       )}
+      
       {/* empty state */}
     </div>
   );

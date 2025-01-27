@@ -16,8 +16,8 @@ const randomVoteData2 = [
 export const candidates = [
   {
     id: 1,
-    name: 'Paul Biya',
-    imageSource: '/images/paulbiya.png',
+    name: 'Jean-Claude',
+    imageSource: '/images/pic33.png',
     partyAbbreviation_en: 'CPDM',
     partyAbbreviation_fr: 'RDPC',
     party: "Cameroon People's Democratic Movement",
@@ -25,8 +25,8 @@ export const candidates = [
   },
   {
     id: 2,
-    name: 'Maigari Bello',
-    imageSource: '/images/bello.png',
+    name: 'Clarisse Ngono',
+    imageSource: '/images/pic35.png',
     partyAbbreviation_en: 'NUDP',
     partyAbbreviation_fr: 'UNDP',
     party: 'National Union for Democracy and Progress',
@@ -34,7 +34,7 @@ export const candidates = [
   },
   {
     id: 3,
-    name: 'Paul Kamga',
+    name: 'Emmanuel Nkou',
     imageSource: '/images/paul2.png',
     partyAbbreviation_en: 'SDF',
     partyAbbreviation_fr: 'FSD',
@@ -43,8 +43,8 @@ export const candidates = [
   },
   {
     id: 4,
-    name: 'Cabral Libii',
-    imageSource: '/images/cabral.png',
+    name: 'Pauline Ekane',
+    imageSource: '/images/pic34.png',
     partyAbbreviation_en: 'CPNR',
     partyAbbreviation_fr: 'PCRN',
     party: 'Cameroonian Party for National Reconciliation',
@@ -167,5 +167,3 @@ export const votingResultsByRegion = [
     ],
   },
 ];
-
-

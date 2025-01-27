@@ -39,7 +39,7 @@ const ImageUpload: React.FC = () => {
     <div className="flex flex-col gap-3 ">
       <div className="flex flex-col items-center gap-6 max-sm:flex-col max-sm:items-start ">
         <div
-          className={`w-[130px]  h-[130px] rounded-full flex flex-col items-center justify-center object-cover object-center relative`}
+          className={`w-[100px]  h-[100px] rounded-full flex flex-col items-center justify-center object-cover object-center relative`}
           style={{
             // backgroundImage: image ? `url(${image})` : 'none',
             backgroundColor: !image ? 'rgba(230,248,244,0.8)' : 'transparent',
@@ -48,14 +48,14 @@ const ImageUpload: React.FC = () => {
           {!image ? (
             <>
               <NextImage
-                width={40}
-                height={40}
+                width={30}
+                height={30}
                 alt="upload image"
                 src="/uploadimg.svg"
               />
               <label
                 htmlFor="image-upload"
-                className="cursor-pointer mt-2 paragraph-small-medium font-semibold text-sm text-primaryGreen-500"
+                className="cursor-pointer mt-2 paragraph-small-medium text-[12px] text-primaryGreen-500"
               >
                 <input
                   id="image-upload"
