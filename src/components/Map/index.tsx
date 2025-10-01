@@ -140,7 +140,7 @@ const Map: React.FC<MapComponentProps> = ({
        layer.on('click', () => handleFilterByRegion(feature.properties.NAME_1));
      } else if (currentLevel === 'departments') {
        layer.on('click', () =>
-         handleFilterByDepartment(feature.properties.NAME_2)
+         handleFilterByDepartment(feature.properties.NAME_1)
        );
      } else if (currentLevel === 'arrondissements') {
        layer.bindPopup(`<b>${feature.properties.NAME_3}</b>`);
