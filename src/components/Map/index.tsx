@@ -143,7 +143,7 @@ const Map: React.FC<MapComponentProps> = ({
          handleFilterByDepartment(feature.properties.NAME_1)
        );
      } else if (currentLevel === 'arrondissements') {
-       layer.bindPopup(`<b>${feature.properties.NAME_3}</b>`);
+       layer.bindPopup(`<b>${feature.properties.NAME_1}</b>`);
      }
 
      // Event handling for mouse interactions
